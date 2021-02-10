@@ -21,13 +21,23 @@ function App() {
                         stHeader = $("#headerCont")[0].scrollHeight,
                         stMenu = $("#menu")[0].scrollHeight,
                         mt = stHeader - stMenu;
+
+                        console.log("st: "+st);
+                        console.log("mt + stMenu: "+(mt + stMenu))
+                        console.log("lastScrollTop: "+lastScrollTop)
+                        console.log("stHeader: "+stHeader);
+                        console.log("stMenu: "+stMenu);
+                        console.log("mt: "+mt);
+                        console.log("lst: "+lst);
         
                     if ((st >= lastScrollTop)) {
                         $("#menu").css({
                             "position": "unset"
                         });
+
+                        lst = -130;
                     }else{
-                        if(lastScrollTop <= mt + stMenu){
+                        if(st <= mt + stMenu){
                             opa -= 0.2;
                             if(opa === 0.5) opa = 0;
                             $("#menu").css({
@@ -52,7 +62,8 @@ function App() {
                                 "opacity": opa
                             })
         
-                            if(lst < 0) lst -= st - lastScrollTop
+                            if(lst < 0) lst -= st - lastScrollTop;
+                            if(lst >= -130) lst -= st - lastScrollTop;
                             if(lst >= 0) lst = 0;
                         }
                     }
