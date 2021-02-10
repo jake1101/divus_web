@@ -1,16 +1,20 @@
+import ArticleImg from './content/ArticleImg';
+import SlideImg from './content/SlideImg';
+import MapContent from './content/MapContent';
+
 import React from 'react';
-import article1 from '../image/article/article1.png'
 
 function Section() {
     return(
     <section>
         <article id="article1">
-            <img src={article1} width="100%"/>
+            <ArticleImg />
         </article>
-        <article id="article2">
-            <img/>
-            <img/>
-            <img/>
+        <article id="articleSlide">
+            <SlideImg />
+        </article>
+        <article id="articleMap">
+            <MapContent />
         </article>
     </section>
     )

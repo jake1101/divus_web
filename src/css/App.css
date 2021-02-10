@@ -95,11 +95,18 @@ section {
     object-fit: cover;
 }
 
+#articleSlide {
+    display: flex;
+    justify-content: center;
+}
 
+#articleSlide img {
+    object-fit: cover;
+}
 
 #articleMap {
-    height: 500px;
-    background-color: #000;
+    display: flex;
+    justify-content: center;
 }
 /* //section */
 
