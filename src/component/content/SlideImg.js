@@ -6,12 +6,23 @@ import slide4 from '../../image/article/article_slide4.png'
 import React, { useEffect } from 'react';
 
 function SlideImg() {
+    useEffect(function() {
+
+    });
     return(
-        <div>
-            <img src={slide1} width="100%" alt="article"/>
-            <img src={slide2} width="100%" alt="article"/>
-            <img src={slide3} width="100%" alt="article"/>
-            <img src={slide4} width="100%" alt="article"/>
+        <div id="slideCont">
+            <div>
+                <img className="slImg" src={slide1} width="100%" alt="article"/>
+            </div>
+            <div>
+                <img className="slImg" src={slide2} width="100%" alt="article"/>
+            </div>
+            <div>
+                <img className="slImg" src={slide3} width="100%" alt="article"/>
+            </div>
+            <div>
+                <img className="slImg" src={slide4} width="100%" alt="article"/>
+            </div>
         </div>
     )
 }

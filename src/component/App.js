@@ -22,14 +22,14 @@ function App() {
                         stMenu = $("#menu")[0].scrollHeight,
                         mt = stHeader - stMenu;
 
-                        console.log("st: "+st);
-                        console.log("mt + stMenu: "+(mt + stMenu))
-                        console.log("st - lastScrollTop: "+(st - lastScrollTop))
-                        console.log("lastScrollTop: "+lastScrollTop)
-                        console.log("stHeader: "+stHeader);
-                        console.log("stMenu: "+stMenu);
-                        console.log("mt: "+mt);
-                        console.log("lst: "+lst);
+                        // console.log("st: "+st);
+                        // console.log("mt + stMenu: "+(mt + stMenu))
+                        // console.log("st - lastScrollTop: "+(st - lastScrollTop))
+                        // console.log("lastScrollTop: "+lastScrollTop)
+                        // console.log("stHeader: "+stHeader);
+                        // console.log("stMenu: "+stMenu);
+                        // console.log("mt: "+mt);
+                        // console.log("lst: "+lst);
         
                     if ((st >= lastScrollTop)) {
                         if(lst > -130){
