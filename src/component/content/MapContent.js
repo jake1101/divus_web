@@ -7,7 +7,7 @@ function MapContent() {
             new daum.roughmap.Lander({
                 "timestamp" : "1612976515378",
                 "key" : "24ed2",
-                "mapWidth" : "1200",
+                "mapWidth" : "1000",
                 "mapHeight" : "560"
             }).render();
     });

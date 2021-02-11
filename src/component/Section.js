@@ -7,15 +7,18 @@ import React from 'react';
 function Section() {
     return(
     <section>
-        <article id="article1">
-            <ArticleImg />
-        </article>
-        <article id="articleSlide">
-            <SlideImg />
-        </article>
-        <article id="articleMap">
-            <MapContent />
-        </article>
+        <div id="sectionCont">
+            <article id="article1">
+                <ArticleImg />
+            </article>
+            <article id="articleSlide">
+                <SlideImg />
+            </article>
+            <article id="articleMap">
+                <MapContent />
+            </article>
+        </div>
+        
     </section>
     )
 }

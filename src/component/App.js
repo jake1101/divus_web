@@ -75,12 +75,10 @@ function App() {
 
     return (
         <div className="App">
-            <div id="wrap">
-                <div id="contant">
-                    <Header/>
-                    <Section />
-                    <Footer />
-                </div>
+            <div id="content">
+                <Header />
+                <Section />
+                <Footer />
             </div>
         </div>
     );

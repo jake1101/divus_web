@@ -4,6 +4,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 		
 		<title>Divus</title>
@@ -11,4 +16,13 @@
 	<body>
 		<div id="root"></div>
 	</body>
+
+	<script>
+		$(document).ready(function(){
+			$('.slider').bxSlider({
+				auto: true,
+				autoStart: true,
+			});
+		});
+	</script>
 </html>

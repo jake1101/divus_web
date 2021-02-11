@@ -13,10 +13,10 @@ function Footer() {
                             <p>(주)디우스</p>
                         </div>
                         <div id="footerMenuBtn">
-                            <span><a href=""><h3>PRODUCTS</h3></a></span>
-                            <span><a href=""><h3>TECHNOLOGY</h3></a></span>
-                            <span><a href=""><h3>CONTACT</h3></a></span>
-                            <span><a href=""><h3>SERVICE</h3></a></span>
+                            <span><a className="linkBtn" href=""><h3>PRODUCTS</h3></a></span>
+                            <span><a className="linkBtn" href=""><h3>TECHNOLOGY</h3></a></span>
+                            <span><a className="linkBtn" href=""><h3>CONTACT</h3></a></span>
+                            <span><a className="linkBtn" href=""><h3>SERVICE</h3></a></span>
                         </div>
                     </article>
                     <article id="footerRightArticle">
