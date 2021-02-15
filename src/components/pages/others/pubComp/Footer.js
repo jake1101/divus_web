@@ -1,20 +1,21 @@
 import React from 'react';
-import logo from '../image/logo/logo189x65.png'
+import logo from '../../../../image/logo/logo189x65.png';
 
-function Footer() {
+export default function Footer() {
     return(
-        <footer>
-
+        <footer className="cont">
             <div id="footerCont">
                 <div>
                     <article id="footerLeftArticle">
                         <div id="footerLogo">
-                            <img src={logo} alt="logo" />
+                            <a className="linkBtn" href="/">
+                                <img src={logo} alt="logo" />
+                            </a>
                             <p>(주)디우스</p>
                         </div>
                         <div id="footerMenuBtn">
-                            <span><a className="linkBtn" href=""><h3>PRODUCTS</h3></a></span>
-                            <span><a className="linkBtn" href=""><h3>TECHNOLOGY</h3></a></span>
+                            <span><a className="linkBtn" href="/products"><h3>PRODUCTS</h3></a></span>
+                            <span><a className="linkBtn" href="/technology"><h3>TECHNOLOGY</h3></a></span>
                             <span><a className="linkBtn" href=""><h3>CONTACT</h3></a></span>
                             <span><a className="linkBtn" href=""><h3>SERVICE</h3></a></span>
                         </div>
@@ -34,9 +35,6 @@ function Footer() {
                     </article>
                 </div>
             </div>
-                
         </footer>
     )
 }
-
-export default Footer;

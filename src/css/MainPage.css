@@ -1,0 +1,123 @@
+header */
+#mainPage_header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 722px;
+    background-color: #666;
+}
+
+#mainPage_headerCont {
+    position: relative;
+}
+
+#mainPage_bg {
+    padding-top: 400px;
+}
+
+#mainPage_title, #mainPage_sub, #mainPage_menuBtn {
+    display: flex;
+    justify-content: center;
+}
+
+#mainPage_title > .headerText {
+    height: 85px;
+}
+
+#mainPage_sub > div {
+    display: inline-block;
+    width: 500px;
+    text-align: center;
+}
+
+#mainPage_menu {
+    width: 100%;
+    position: unset;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#mainPage_menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#mainPage_hiddenItem {
+    display: block;
+    position: absolute;
+    left: 30px;
+}
+
+#hLogo {
+    width:100%; height:100%; line-height: 7rem;
+    opacity: 0;
+}
+
+#hLogo > img {
+    max-width:100%; max-height:100%;
+    vertical-align: middle;
+}
+
+#menuBtn > span {
+    padding: 40px 30px 30px 30px;
+}
+/* //header */
+
+/* section */
+#mainPage_section {
+    padding: 30px 500px 30px 500px;
+}
+
+#sectionCont {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sectionCont > article {
+    padding-bottom: 30px;
+}
+
+#article1 {
+    width: 100%;
+}
+
+#article1 img {
+    object-fit: cover;
+}
+
+.slider {
+    position: relative;
+}
+
+.slDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slImg {
+    width: fit-content;
+}
+
+.slTxt {
+    margin: 0;
+    padding: 20px 0 30px 0;
+
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    
+}
+
+#articleMap {
+    display: flex;
+    justify-content: center;
+}
+/* //section
