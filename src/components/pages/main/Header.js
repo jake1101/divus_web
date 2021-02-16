@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import logo from '../../../image/logo/logo189x65.png';
 
-const StyledMainHeader = styled.header`
+const StyledHeader = styled.header`
     height: 727px;
     top: 0;
     left: 0;
@@ -40,12 +40,12 @@ const HeaderSub = function() {
 
 export default function Header() {
     return(
-        <StyledMainHeader id="header">
+        <StyledHeader id="header">
             <StyledHeaderContent>
                 <HeaderLogo />
                 <HeaderSub />
             </StyledHeaderContent>
-            <Menu />
-        </StyledMainHeader>
+            <Menu opa={0}/>
+        </StyledHeader>
     )
 }

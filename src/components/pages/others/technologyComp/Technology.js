@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Header from './pubComp/Header'
-import Footer from './pubComp/Footer';
+import Menu from '../../public/Menu';
+import Footer from '../../public/Footer';
 
 export default function Technology() {
     return (
-        <div>
-            <Header />
+        <div id="content">
+            <Menu opa={1}/>
             Technology
             <Footer />
         </div>

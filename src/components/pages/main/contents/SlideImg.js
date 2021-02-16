@@ -1,30 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import slide1 from '../../../../image/article/article_slide1.png'
 import slide2 from '../../../../image/article/article_slide2.png'
 import slide3 from '../../../../image/article/article_slide3.png'
 import slide4 from '../../../../image/article/article_slide4.png'
 
+const StyledSlideDiv = styled.div`
+    display: flex;
+    justify-content: center;
+`;
 
 function SlideImg() {
     return(
         <div className="slider">
-            <div className="slDiv">
+            <StyledSlideDiv>
                 <img className="slImg" src={slide1} alt="article"/>
-                {/* <span className="slTxt">운수(택시) doctor car 시범 사업</span> */}
-            </div>
-            <div className="slDiv">
+            </StyledSlideDiv>
+            <StyledSlideDiv>
                 <img className="slImg" src={slide2} alt="article"/>
-                {/* <span className="slTxt">렌터카(공유 자동차) doctor car solution</span> */}
-            </div>
-            <div className="slDiv">
+            </StyledSlideDiv>
+            <StyledSlideDiv>
                 <img className="slImg" src={slide3} alt="article"/>
-                {/* <span className="slTxt">자동차 수리 업체용 doctor car solution</span> */}
-            </div>
-            <div className="slDiv">
+            </StyledSlideDiv>
+            <StyledSlideDiv>
                 <img className="slImg" src={slide4} alt="article"/>
-                {/* <span className="slTxt">주차관제업체용 doctor car solution</span> */}
-            </div>
+            </StyledSlideDiv>
         </div>
     )
 }

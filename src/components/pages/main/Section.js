@@ -9,26 +9,22 @@ const StyledMainSection = styled.section`
     padding: 30px 400px 30px 400px;
 `;
 
-const StyledSectionIntro = styled.article`
-    padding: 0 0 30px 0;
-`;
-
-const StyledSectionSlide = styled.article`
+const StyledSection = styled.article`
     padding: 0 0 30px 0;
 `;
 
 export default function Section() {
     return(
     <StyledMainSection>
-        <StyledSectionIntro>
+        <StyledSection>
             <ArticleImg />
-        </StyledSectionIntro>
-        <StyledSectionSlide>
+        </StyledSection>
+        <StyledSection>
             <SlideImg />
-        </StyledSectionSlide>
-            <article id="articleMap">
-                <MapContent />
-            </article>
+        </StyledSection>
+        <StyledSection>
+            <MapContent />
+        </StyledSection>
     </StyledMainSection>
     )
 }
