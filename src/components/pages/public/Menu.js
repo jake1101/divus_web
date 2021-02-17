@@ -4,13 +4,15 @@ import styled from 'styled-components';
 
 import logo from '../../../image/logo/logo189x65.png';
 
+import $ from 'jquery';
+
 const StyledMenu = styled.menu`
     margin: 0;
     padding: 0;
 `;
 
 const StyledMenuBar = styled.div`
-    position: fixed;
+    position: relative;
     width: 100%;
     padding: 44px 48px;
     background-color: rgba(0,0,0,0.5);
@@ -51,6 +53,64 @@ const MenuLink = function(props) {
 };
 
 export default function Menu(props) {
+    useEffect(function(){
+        var stHeader = $("#header")[0].scrollHeight,
+            stMenu = $("#menuBar")[0].scrollHeight,
+            stM = stHeader - stMenu,
+            mt = -stMenu,
+            fst = 0,
+            opa = 0;
+
+            $(window).scroll(function() {
+                var st = $(this).scrollTop();
+                console.log(st);
+                console.log(stM);
+                if(st > stM) {
+                    if(st > stHeader) {
+                        if(fst > st) {
+                            $("#menuBar").css({
+                                position: "fixed",
+                                top: mt
+                            });
+                            $("#menuLogo").css({
+                                opacity: opa
+                            });
+
+                            mt += 10;
+                            opa += 0.05;
+                            if(mt >= 0) mt = 0;
+                            if(opa >= 1) opa = 1;
+                        }else{
+                            $("#menuBar").css({
+                                position: "fixed",
+                                top: mt
+                            });
+                            $("#menuLogo").css({
+                                opacity: opa
+                            });
+        
+                            mt -= 10;
+                            opa -= 0.2;
+                            if(mt <= -stMenu) mt = -stMenu;
+                            if(opa <= 0) opa = 0;
+                        }
+                    }
+                }else{
+                    $("#menuBar").css({
+                        position: "relative",
+                        top: 0
+                    });
+                    $("#menuLogo").css({
+                        opacity: opa
+                    });
+        
+                    mt = -stMenu;
+                    opa -= 0.1;
+                    if(opa <= 0) opa = 0; 
+                }
+                fst = st;
+            })
+    })
     return (
         <StyledMenu id={"menu"}>
             <StyledMenuBar id={"menuBar"}>

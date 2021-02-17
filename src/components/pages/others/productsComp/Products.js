@@ -33,7 +33,10 @@ export default function Products() {
 
     return (
         <div id="content">
-            <Menu opa={1}/>
+            <header id="header">
+                <Menu opa={1}/>
+            </header>
+            
             <div>
                 <h1>useState{number}</h1>
                 <button onClick={stateIncrease}>+1</button>
