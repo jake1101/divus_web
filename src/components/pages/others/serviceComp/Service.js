@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Menu from '../../public/Menu';
+import Header from '../aPubTop/Header'
 import Footer from '../../public/Footer';
 
 export default function Service() {
     return (
         <div id="content">
-            <Menu opa={1}/>
-            service
+            <Header f={"AUTHENTICATED USERS"} l={"CAN DEMONSTRATE THE PRODUCT."}/>
             <Footer />
         </div>
     )

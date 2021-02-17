@@ -6,6 +6,12 @@ import slide2 from '../../../../image/article/article_slide2.png'
 import slide3 from '../../../../image/article/article_slide3.png'
 import slide4 from '../../../../image/article/article_slide4.png'
 
+const StyledSlideWrap = styled.div`
+    background-color: #333;
+    height: 750px;
+    padding: 30px 400px 0 400px;
+`;
+
 const StyledSlideDiv = styled.div`
     display: flex;
     justify-content: center;
@@ -13,20 +19,22 @@ const StyledSlideDiv = styled.div`
 
 function SlideImg() {
     return(
-        <div className="slider">
-            <StyledSlideDiv>
-                <img className="slImg" src={slide1} alt="article"/>
-            </StyledSlideDiv>
-            <StyledSlideDiv>
-                <img className="slImg" src={slide2} alt="article"/>
-            </StyledSlideDiv>
-            <StyledSlideDiv>
-                <img className="slImg" src={slide3} alt="article"/>
-            </StyledSlideDiv>
-            <StyledSlideDiv>
-                <img className="slImg" src={slide4} alt="article"/>
-            </StyledSlideDiv>
-        </div>
+        <StyledSlideWrap>
+            <div className="slider">
+                <StyledSlideDiv>
+                    <img className="slImg" src={slide1} alt="article"/>
+                </StyledSlideDiv>
+                <StyledSlideDiv>
+                    <img className="slImg" src={slide2} alt="article"/>
+                </StyledSlideDiv>
+                <StyledSlideDiv>
+                    <img className="slImg" src={slide3} alt="article"/>
+                </StyledSlideDiv>
+                <StyledSlideDiv>
+                    <img className="slImg" src={slide4} alt="article"/>
+                </StyledSlideDiv>
+            </div>
+        </StyledSlideWrap>
     )
 }
 

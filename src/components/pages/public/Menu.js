@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -54,62 +54,63 @@ const MenuLink = function(props) {
 
 export default function Menu(props) {
     useEffect(function(){
-        var stHeader = $("#header")[0].scrollHeight,
+        var stHeader = $("#headerDiv")[0].scrollHeight,
             stMenu = $("#menuBar")[0].scrollHeight,
             stM = stHeader - stMenu,
             mt = -stMenu,
             fst = 0,
-            opa = 0;
+            opa = props.opa;
 
-            $(window).scroll(function() {
-                var st = $(this).scrollTop();
-                console.log(st);
-                console.log(stM);
-                if(st > stM) {
-                    if(st > stHeader) {
-                        if(fst > st) {
-                            $("#menuBar").css({
-                                position: "fixed",
-                                top: mt
-                            });
-                            $("#menuLogo").css({
-                                opacity: opa
-                            });
+        if(!$(this).scrollTop()) opa = props.opa;
 
-                            mt += 10;
-                            opa += 0.05;
-                            if(mt >= 0) mt = 0;
-                            if(opa >= 1) opa = 1;
-                        }else{
-                            $("#menuBar").css({
-                                position: "fixed",
-                                top: mt
-                            });
-                            $("#menuLogo").css({
-                                opacity: opa
-                            });
-        
-                            mt -= 10;
-                            opa -= 0.2;
-                            if(mt <= -stMenu) mt = -stMenu;
-                            if(opa <= 0) opa = 0;
-                        }
-                    }
-                }else{
+        $(window).scroll(function() {
+            var st = $(this).scrollTop();
+
+            if(st > stM){
+                if(fst > st) {
                     $("#menuBar").css({
-                        position: "relative",
-                        top: 0
+                        position: "fixed",
+                        top: mt
                     });
                     $("#menuLogo").css({
                         opacity: opa
                     });
-        
-                    mt = -stMenu;
-                    opa -= 0.1;
-                    if(opa <= 0) opa = 0; 
+
+                    mt += 10;
+                    opa += 0.05;
+                    if(mt >= 0) mt = 0;
+                    if(opa >= 1) opa = 1;
+                }else{
+                    if(fst > stHeader){
+                        $("#menuBar").css({
+                            position: "fixed",
+                            top: mt
+                        });
+                        $("#menuLogo").css({
+                            opacity: opa
+                        });
+    
+                        mt -= 10;
+                        opa -= 0.2;
+                        if(mt <= -stMenu) mt = -stMenu;
+                        if(opa <= 0) opa = 0;
+                    }
                 }
-                fst = st;
-            })
+            }else{
+                $("#menuBar").css({
+                    position: "relative",
+                    top: 0
+                });
+                $("#menuLogo").css({
+                    opacity: opa
+                });
+    
+                mt = -stMenu;
+                opa -= 0.1;
+                if(opa <= 0) opa = 0; 
+            }
+            fst = st;
+        })
     })
     return (
         <StyledMenu id={"menu"}>
@@ -118,7 +119,7 @@ export default function Menu(props) {
                     <a className="linkClass" href="/"><img src={logo} alt="logo" /></a>
                 </StyledMenuLogo>
                 <StyledMenuLinks>
-                    <MenuLink src={"/products"} title={"PRODUCTS"} />
+                    <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>
                     <MenuLink src={"/technology"} title={"TECHNOLOGY"} />
                     <MenuLink src={"/contact"} title={"CONTACT"} />
                     <MenuLink src={"/service"} title={"SERVICE"} />

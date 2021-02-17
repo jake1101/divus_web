@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Menu from '../../public/Menu';
+import Header from '../aPubTop/Header'
 import Footer from '../../public/Footer';
 
 export default function Technology() {
     return (
         <div id="content">
-            <Menu opa={1}/>
-            Technology
+            <Header f={"IT IS OUR TECHNOLOGY"} l={"FOR THE FUTURE."} />
             <Footer />
         </div>
     )

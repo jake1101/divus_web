@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Menu from '../../public/Menu';
+import Header from '../aPubTop/Header'
 import Footer from '../../public/Footer';
 
 export default function Contact() {
     return (
         <div id="content">
-            <Menu opa={1}/>
-            contact
+            <Header f={"IF YOU HAVE ANY QUESTIONS,"} l={"WE WILL CONTACT YOU."} />
             <Footer />
         </div>
     )

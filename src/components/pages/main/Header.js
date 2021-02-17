@@ -2,20 +2,25 @@ import React from 'react';
 import Menu from '../public/Menu';
 import styled from 'styled-components';
 
+import sampleBg from '../../../image/sample_bg.jpg';
 import logo from '../../../image/logo/logo189x65.png';
 
 const StyledHeader = styled.header`
     height: 727px;
-    top: 0;
-    left: 0;
     text-align: center;
-    background: #888;
     padding: 0;
     margin: 0;
 `;
 
 const StyledHeaderContent = styled.div`
     height: 590px;
+`;
+
+const StyledHeaderBg = styled.div`
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const HeaderLogoStyle  = {
@@ -38,10 +43,19 @@ const HeaderSub = function() {
     )
 }
 
-export default function Header() {
+const HeaderBg = function() {
     return(
-        <StyledHeader id="header">
-            <StyledHeaderContent>
+        <img src={sampleBg} />
+    )
+}
+
+export default function Header(props) {
+    return(
+        <StyledHeader id="headerDiv">
+            <StyledHeaderContent {...props}>
+                <StyledHeaderBg>
+                    <HeaderBg />
+                </StyledHeaderBg>
                 <HeaderLogo />
                 <HeaderSub />
             </StyledHeaderContent>

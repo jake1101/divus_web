@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-div, span, h1, h2, h3 {
+div, span, p, a, h1, h2, h3 {
     margin: 0;
     padding: 0;
     border: none;
@@ -17,6 +17,7 @@ div, span, h1, h2, h3 {
 
 #content {
     width: 100%;
+    background-color: #fff;
 }
 
 .m_selected h3 {

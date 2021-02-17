@@ -6,25 +6,25 @@ import SlideImg from './contents/SlideImg';
 import MapContent from './contents/MapContent';
 
 const StyledMainSection = styled.section`
-    padding: 30px 400px 30px 400px;
+    padding: 30px 0px 30px 0px;
 `;
 
-const StyledSection = styled.article`
+const StyledArticle = styled.article`
     padding: 0 0 30px 0;
 `;
 
 export default function Section() {
     return(
     <StyledMainSection>
-        <StyledSection>
+        <StyledArticle>
             <ArticleImg />
-        </StyledSection>
-        <StyledSection>
+        </StyledArticle>
+        <StyledArticle>
             <SlideImg />
-        </StyledSection>
-        <StyledSection>
+        </StyledArticle>
+        <StyledArticle>
             <MapContent />
-        </StyledSection>
+        </StyledArticle>
     </StyledMainSection>
     )
 }
