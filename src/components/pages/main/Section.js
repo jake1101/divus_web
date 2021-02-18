@@ -6,11 +6,9 @@ import SlideImg from './contents/SlideImg';
 import MapContent from './contents/MapContent';
 
 const StyledMainSection = styled.section`
-    padding: 30px 0px 30px 0px;
 `;
 
 const StyledArticle = styled.article`
-    padding: 0 0 30px 0;
 `;
 
 export default function Section() {

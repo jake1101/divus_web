@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 const { daum } = window;
 
+const StyledMapWrap = styled.div`
+    padding: 60px 100px 30px 100px;
+    background-color: #fff;
+`;
+
 const StyledMapDiv = styled.div`
     display: flex;
     justify-content: center;
@@ -19,10 +24,11 @@ function MapContent() {
     });
 
     return(
-        <StyledMapDiv>
-            <div id="daumRoughmapContainer1612976515378" className="root_daum_roughmap root_daum_roughmap_landing"></div>
-        </StyledMapDiv>
-        
+        <StyledMapWrap>
+            <StyledMapDiv>
+                <div id="daumRoughmapContainer1612976515378" className="root_daum_roughmap root_daum_roughmap_landing"></div>
+            </StyledMapDiv>
+        </StyledMapWrap>
     )
 }
 

@@ -1,71 +1,41 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 
-const StyledLinksDiv = styled.div`
-    position: relative;
-    display: inline;
+import PageLink from './PageLink';
+
+const StyledLinksWrap = styled.div`
     width: 100%;
-    z-index: 101;
+    height: 60px;
+    display: flex;
+    justify-content: center;
 `;
 
-const StyledLinkTitle = styled.div`
-    position: relative;
-    text-align: center;
-`;
+export default function TopArticle(props) {
 
-const StyledTitleH3 = styled.h3`
-    position: relative;
-    display: inline-block;
-    &:hover {
-        color: red;
-        cursor: pointer;
-    }
-    z-index: 200;
-`;
-
-const StyledLinkWrap = styled.div`
-    display: inline;
-    text-align: center;
-    visibility: hidden;
-    position: absolute;
-    top: 24px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    z-index: 201;
-`;
-
-const StyledLink = styled.span`
-    position: sticky;
-    width: 100%;
-    padding-right: 30px;
-    &:hover {
-        color: red;
-        cursor: pointer;
-    }
-    z-index: 202;
-`;
-
-export default function PageLinkComp(props) {
-    let element = [];
-    
-    if(props.link.length > 0){
-        for(var i = 0; i<props.link.length; i++){
-            element.push(<StyledLink id={i} key={i}>{props.link[i]}</StyledLink>)
-        }
-    }else{
-        element = "";
-    }
-
-    return (
-        <StyledLinksDiv className={"linkDiv"}>
-            <StyledLinkTitle>
-                <StyledTitleH3 className={"linkTitle"}>{props.title}</StyledTitleH3>
-            </StyledLinkTitle>
-            <StyledLinkWrap>
-                {element}
-            </StyledLinkWrap>
-        </StyledLinksDiv>
+    useEffect(function(){
+        let i = 0;
+        const linkTitle = document.getElementsByClassName("linkTitle");
+        console.log(props);
         
+        for(i; i<linkTitle.length; i++){
+            linkTitle[i].addEventListener("click", function() {
+                const linkWrap = this.parentNode.parentNode.children[1];
+
+                if(linkWrap.style.visibility === "hidden" || !linkWrap.style.visibility){
+                    linkWrap.style.visibility = "visible";
+                    linkWrap.addEventListener("mouseleave", () => linkWrap.style.visibility = "hidden");
+                }else{
+                    linkWrap.style.visibility = "hidden";
+                }
+            })
+        }
+        
+    })
+    
+    return (
+        <StyledLinksWrap>
+            <PageLink title={"DOCTOR CAR AI"} link={["Damage Detection","Car Segment","Car Part Segment","ANPR"]} />
+            <PageLink title={"DOCTOR FACTORY AI"} link={""}/>
+        </StyledLinksWrap>
     )
 }

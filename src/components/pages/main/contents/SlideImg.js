@@ -8,8 +8,7 @@ import slide4 from '../../../../image/article/article_slide4.png'
 
 const StyledSlideWrap = styled.div`
     background-color: #333;
-    height: 750px;
-    padding: 30px 400px 0 400px;
+    padding: 60px 100px 30px 100px;
 `;
 
 const StyledSlideDiv = styled.div`

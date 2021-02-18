@@ -14,21 +14,19 @@ const StyledHeader = styled.header`
 
 const StyledHeaderContent = styled.div`
     height: 590px;
-`;
-
-const StyledHeaderBg = styled.div`
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url(${sampleBg});
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 const HeaderLogoStyle  = {
-    marginTop: "400px"
+    marginTop: "400px",
+    backgroundColor: "rgba(255,255,255,0.7)"
 }
 
 const HeaderSubStyle = {
-    paddingTop: "30px"
+    paddingTop: "30px",
+    backgroundColor: "rgba(255,255,255,0.7)"
 }
 
 const HeaderLogo = function() {
@@ -43,19 +41,10 @@ const HeaderSub = function() {
     )
 }
 
-const HeaderBg = function() {
-    return(
-        <img src={sampleBg} />
-    )
-}
-
 export default function Header(props) {
     return(
         <StyledHeader id="headerDiv">
             <StyledHeaderContent {...props}>
-                <StyledHeaderBg>
-                    <HeaderBg />
-                </StyledHeaderBg>
                 <HeaderLogo />
                 <HeaderSub />
             </StyledHeaderContent>
