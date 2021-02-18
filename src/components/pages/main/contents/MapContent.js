@@ -4,8 +4,7 @@ import styled from 'styled-components';
 const { daum } = window;
 
 const StyledMapWrap = styled.div`
-    padding: 60px 100px 30px 100px;
-    background-color: #fff;
+    padding: 60px 20% 60px 20%;
 `;
 
 const StyledMapDiv = styled.div`

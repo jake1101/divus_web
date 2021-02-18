@@ -2,8 +2,7 @@ import React from 'react';
 import Menu from '../public/Menu';
 import styled from 'styled-components';
 
-import sampleBg from '../../../image/sample_bg.jpg';
-import logo from '../../../image/logo/logo189x65.png';
+import bg from '../../../image/type2.gif';
 
 const StyledHeader = styled.header`
     height: 727px;
@@ -13,42 +12,34 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHeaderContent = styled.div`
-    height: 590px;
-    background-image: url(${sampleBg});
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 530px;
+    background-color: #666;
+    padding: 120px 0 30px 0;
 `;
 
-const HeaderLogoStyle  = {
-    marginTop: "400px",
-    backgroundColor: "rgba(255,255,255,0.7)"
-}
+const StyledBgImg = styled.img`
+    height: 100%;
+    box-shadow: 0px 0px 300px 260px #222;
+    border-radius: 100px;
+`;
 
-const HeaderSubStyle = {
-    paddingTop: "30px",
-    backgroundColor: "rgba(255,255,255,0.7)"
-}
-
-const HeaderLogo = function() {
+const HeaderBg = function() {
     return(
-        <a href="/"><img style={HeaderLogoStyle} src={logo} alt="logo" /></a>
+        <StyledBgImg src={bg} alt="backgroundgjf" />
     )
 }
 
-const HeaderSub = function() {
-    return(
-        <h2 style={HeaderSubStyle}>We are leading the image processing field as a deep learning.</h2>
-    )
-}
-
-export default function Header(props) {
+export default function Header() {
     return(
         <StyledHeader id="headerDiv">
-            <StyledHeaderContent {...props}>
-                <HeaderLogo />
-                <HeaderSub />
+            <StyledHeaderContent>
+                <HeaderBg />
             </StyledHeaderContent>
             <Menu opa={0}/>
         </StyledHeader>
     )
 }
+
+// background-image: url(${bg});
+// background-repeat: no-repeat;
+// background-size: contain;

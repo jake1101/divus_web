@@ -7,8 +7,8 @@ import slide3 from '../../../../image/article/article_slide3.png'
 import slide4 from '../../../../image/article/article_slide4.png'
 
 const StyledSlideWrap = styled.div`
-    background-color: #333;
-    padding: 60px 100px 30px 100px;
+    background-color: #46413b;
+    padding: 60px 20% 30px 20%;
 `;
 
 const StyledSlideDiv = styled.div`

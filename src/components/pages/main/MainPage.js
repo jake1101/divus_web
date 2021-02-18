@@ -7,7 +7,7 @@ import Footer from '../public/Footer';
 export default function MainPage() {
     return (
         <div id="content">
-            <Header imgUrl={"../../../image/sample_bg.jpg"} />
+            <Header />
             <Section />
             <Footer />
         </div>

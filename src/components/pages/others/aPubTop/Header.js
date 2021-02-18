@@ -6,7 +6,6 @@ import Menu from '../../public/Menu';
 const StyledPubHeader = styled.div`
     height: 137px;
     text-align: center;
-    background: #888;
     padding: 0;
     margin: 0;
 `;

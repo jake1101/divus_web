@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import logo from '../../../image/logo/logo189x65.png';
+import logo from '../../../image/logo/logo_w_colored.png';
+
+import $ from 'jquery';
 
 const StyledFooter = styled.footer`
     position: absolute;
@@ -11,8 +13,8 @@ const StyledFooter = styled.footer`
     left: 0;
     width: 100%;
     height: 300px;
-    color: white;
-    background: linear-gradient(white, black);
+    color: #ded2cf;
+    background: #46413b;
 `;
 
 const StyledFooterDiv = styled.div`
@@ -60,12 +62,12 @@ const StyledMenuDiv = styled.div`
 `;
 
 const StyledFooterLink = styled.h3`
-    color: white;
+    color: #fff;
     margin: 39px 20px 20px 20px;
     &:hover {
-        color: black;
+        color: #dcdbe1;
         margin-bottom: -3px;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid #fff;
     }
 `;
 
@@ -86,9 +88,29 @@ const StyledFooterInfoDesc = styled.h4`
     font-weight: 100;
 `;
 
+const StyledSetScrollTop = styled.button`
+    display: none;
+    font-size: 40px;
+    width: 60px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid;
+    border-radius: 6px;
+    position: fixed;
+    bottom: 40px;
+    left: 90%;
+    color: rgba(190,186,181,0.7);
+    outline: 0;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(220,219,225,1);
+        border: 2px solid;
+    }
+`;
+
 const FooterHomeLink = function(){
     return(
-        <a href="/"><img src={logo} alt="logo" /></a>
+        <a href="/"><img id={"logo"} src={logo} alt="logo" /></a>
     )
 };
 
@@ -154,6 +176,26 @@ const FooterBottomDiv = function() {
     )
 };
 
+const SetScrollTop = function() {
+    useEffect(()=>{
+        const btn = document.getElementById("setSclBtn");
+        const offsetHeight = window.document.body.offsetHeight;
+
+        btn.addEventListener("click", () => {
+            window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+        });
+
+        $(window).scroll(function() {
+            var st = $(this).scrollTop();
+            if(st > offsetHeight * 0.8) btn.style.display = "block";
+            else btn.style.display = "none";
+        });
+    })
+    return(
+        <StyledSetScrollTop id="setSclBtn"><i className="fas fa-angle-double-up"></i></StyledSetScrollTop>
+    )
+};
+
 export default function Footer() {
     return(
         <StyledFooter>
@@ -162,6 +204,7 @@ export default function Footer() {
                 <FooterRightDiv />
                 <FooterBottomDiv />
             </StyledFooterDiv>
+            <SetScrollTop/>
         </StyledFooter>
     )
-};
+}

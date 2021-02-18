@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import logo from '../../../image/logo/logo189x65.png';
+import logo from '../../../image/logo/logo_w_colored.png';
 
 import $ from 'jquery';
 
@@ -14,8 +14,8 @@ const StyledMenu = styled.menu`
 const StyledMenuBar = styled.div`
     position: relative;
     width: 100%;
-    padding: 44px 48px;
-    background-color: rgba(0,0,0,0.5);
+    padding: 44px 0 44px 0;
+    background-color: rgba(0,0,0,0);
     z-index: 99;
 `;
 
@@ -23,6 +23,7 @@ const StyledMenuLogo = styled.div`
     position: absolute;
     top: 20px;
     opacity: ${props => props.opa};
+    padding-left: 48px;
 `;
 
 const StyledMenuLinks = styled.div`
@@ -32,15 +33,15 @@ const StyledMenuLinks = styled.div`
 
 const StyledLink = styled.h3`
     &:hover {
-        color: black;
+        color: #ded2cf;
         margin-bottom: -3px;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid #fff;
     }
 `;
 
 const linkStyle = {
     padding: "12px 30px 12px 30px",
-    color: "white",
+    color: "#fff",
     textDecoration: "none",
 };
 
@@ -59,18 +60,24 @@ export default function Menu(props) {
             stM = stHeader - stMenu,
             mt = -stMenu,
             fst = 0,
-            opa = props.opa;
+            opa = props.opa,
+            bgOpa = 0;
 
-        if(!$(this).scrollTop()) opa = props.opa;
+        if(!$(this).scrollTop()){
+            opa = props.opa;
+            bgOpa = 0;
+        } 
 
         $(window).scroll(function() {
             var st = $(this).scrollTop();
 
             if(st > stM){
                 if(fst > st) {
+                    bgOpa = 0.8;
                     $("#menuBar").css({
                         position: "fixed",
-                        top: mt
+                        top: mt,
+                        backgroundColor: `rgba(102,102,102,${bgOpa})`
                     });
                     $("#menuLogo").css({
                         opacity: opa
@@ -84,7 +91,7 @@ export default function Menu(props) {
                     if(fst > stHeader){
                         $("#menuBar").css({
                             position: "fixed",
-                            top: mt
+                            top: mt,
                         });
                         $("#menuLogo").css({
                             opacity: opa
@@ -99,7 +106,8 @@ export default function Menu(props) {
             }else{
                 $("#menuBar").css({
                     position: "relative",
-                    top: 0
+                    top: 0,
+                    backgroundColor: `rgba(102,102,102,${bgOpa})`
                 });
                 $("#menuLogo").css({
                     opacity: opa
@@ -107,16 +115,20 @@ export default function Menu(props) {
     
                 mt = -stMenu;
                 opa -= 0.1;
+                bgOpa -= 0.1;
                 if(opa <= 0) opa = 0; 
+                if(bgOpa <= 0) opa = 0;
             }
             fst = st;
+
+            if(st <= 0) bgOpa = 0;
         })
     })
     return (
         <StyledMenu id={"menu"}>
             <StyledMenuBar id={"menuBar"}>
                 <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
-                    <a className="linkClass" href="/"><img src={logo} alt="logo" /></a>
+                    <a className="linkClass" href="/"><img id={"logo"} src={logo} alt="logo" /></a>
                 </StyledMenuLogo>
                 <StyledMenuLinks>
                     <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>

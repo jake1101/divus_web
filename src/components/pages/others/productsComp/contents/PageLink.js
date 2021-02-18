@@ -17,7 +17,7 @@ const StyledTitleH3 = styled.h3`
     position: relative;
     display: inline-block;
     &:hover {
-        color: red;
+        color: #dcdbe1;
         cursor: pointer;
     }
     z-index: 200;
@@ -40,7 +40,7 @@ const StyledLink = styled.span`
     width: 100%;
     padding-right: 30px;
     &:hover {
-        color: red;
+        color: #dcdbe1;
         cursor: pointer;
     }
     z-index: 202;

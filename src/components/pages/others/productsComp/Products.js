@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../aPubTop/Header';
 import PageLinkComp from './contents/PageLinkComp'
 import Footer from '../../public/Footer';
+import Section from './Section';
 
 export default function Products() {
     const props = {
@@ -13,6 +14,7 @@ export default function Products() {
         <div id="content">
             <Header {...props}/>
             <PageLinkComp />
+            <Section />
             <Footer />
         </div>
     )
