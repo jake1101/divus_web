@@ -39,6 +39,33 @@ const StyledLink = styled.h3`
     }
 `;
 
+const StyledHiddenMenu = styled.div`
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    visibility: hidden;
+`;
+
+const StyledHiddenMenuBtn = styled.h2`
+    padding: 15px 0 0 0;
+    font-size: 40px;
+    &:hover {
+        cursor: pointer;
+        color: #ded2cf;
+        margin-bottom: -3px;
+        border-bottom: 3px solid #fff;
+    }
+`;
+
+const StyledHiddenMenuLinks = styled.div`
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: right;
+    visibility: hidden;
+    padding: 20px 0 20px 40px;
+`;
+
 const linkStyle = {
     padding: "12px 30px 12px 30px",
     color: "#fff",
@@ -66,7 +93,14 @@ export default function Menu(props) {
         if(!$(this).scrollTop()){
             opa = props.opa;
             bgOpa = 0;
-        } 
+        }
+
+        $("#hiddenBtn").off().on("click", ()=>{
+            if(!$("#hiddenMenuLinks")[0].style.visibility || $("#hiddenMenuLinks")[0].style.visibility === "hidden") $("#hiddenMenuLinks").css({visibility: "visible"});
+            else $("#hiddenMenuLinks")[0].style.visibility = "hidden"
+        })
+
+        $("#hiddenMenuLinks").on("mouseleave", () => $("#hiddenMenuLinks")[0].style.visibility = "hidden");
 
         $(window).scroll(function() {
             var st = $(this).scrollTop();
@@ -130,12 +164,21 @@ export default function Menu(props) {
                 <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
                     <a className="linkClass" href="/"><img id={"logo"} src={logo} alt="logo" /></a>
                 </StyledMenuLogo>
-                <StyledMenuLinks>
+                <StyledMenuLinks id="menuLinks">
                     <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>
-                    <MenuLink src={"/technology"} title={"TECHNOLOGY"} />
-                    <MenuLink src={"/contact"} title={"CONTACT"} />
-                    <MenuLink src={"/service"} title={"SERVICE"} />
+                    <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+                    <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+                    <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
                 </StyledMenuLinks>
+                <StyledHiddenMenu id="hiddenMenu">
+                    <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
+                    <StyledHiddenMenuLinks id="hiddenMenuLinks">
+                        <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>
+                        <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+                        <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+                        <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
+                    </StyledHiddenMenuLinks>
+                </StyledHiddenMenu>
             </StyledMenuBar>
         </StyledMenu>
     )

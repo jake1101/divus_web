@@ -23,7 +23,7 @@ function MapContent() {
     });
 
     return(
-        <StyledMapWrap>
+        <StyledMapWrap className="article3">
             <StyledMapDiv>
                 <div id="daumRoughmapContainer1612976515378" className="root_daum_roughmap root_daum_roughmap_landing"></div>
             </StyledMapDiv>

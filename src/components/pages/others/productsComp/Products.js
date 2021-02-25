@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from '../aPubTop/Header';
+import Header from '../header/Header';
 import PageLinkComp from './contents/PageLinkComp'
 import Footer from '../../public/Footer';
 import Section from './Section';

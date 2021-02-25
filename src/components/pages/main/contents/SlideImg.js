@@ -18,7 +18,7 @@ const StyledSlideDiv = styled.div`
 
 function SlideImg() {
     return(
-        <StyledSlideWrap>
+        <StyledSlideWrap className="article2">
             <div className="slider">
                 <StyledSlideDiv>
                     <img className="slImg" src={slide1} alt="article"/>

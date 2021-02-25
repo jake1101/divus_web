@@ -19,6 +19,7 @@ const StyledTitleH3 = styled.h3`
     &:hover {
         color: #dcdbe1;
         cursor: pointer;
+        border-bottom: 1px solid;
     }
     z-index: 200;
 `;
@@ -42,6 +43,7 @@ const StyledLink = styled.span`
     &:hover {
         color: #dcdbe1;
         cursor: pointer;
+        border-bottom: 1px solid;
     }
     z-index: 202;
 `;

@@ -16,12 +16,13 @@ const StyledGreeting = styled.div`
 `;
 
 const StyledArticle = styled.article`
+
 `;
 
 export default function Section() {
     return(
     <StyledMainSection>
-        <StyledGreeting><h1>WELCOME TO DIVUS</h1></StyledGreeting>
+        <StyledGreeting className="greetTxt"><h1>WELCOME TO DIVUS</h1></StyledGreeting>
         <StyledArticle>
             <ArticleImg />
         </StyledArticle>

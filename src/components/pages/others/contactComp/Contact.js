@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from '../aPubTop/Header';
+import Header from '../header/Header';
 import Section from './Section';
 import Footer from '../../public/Footer';
 

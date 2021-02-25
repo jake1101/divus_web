@@ -22,7 +22,7 @@ const StyledTitleH1 = styled.h1`
 
 export default function Header(props) {
     return (
-        <header>
+        <header className="othHeader">
             <StyledPubHeader id={"headerDiv"}>
                 <Menu opa={1}/>
             </StyledPubHeader>

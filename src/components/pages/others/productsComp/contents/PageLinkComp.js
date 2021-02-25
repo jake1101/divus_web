@@ -15,7 +15,6 @@ export default function TopArticle(props) {
     useEffect(function(){
         let i = 0;
         const linkTitle = document.getElementsByClassName("linkTitle");
-        console.log(props);
         
         for(i; i<linkTitle.length; i++){
             linkTitle[i].addEventListener("click", function() {

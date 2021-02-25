@@ -13,7 +13,6 @@ const StyledHeader = styled.header`
 
 const StyledHeaderContent = styled.div`
     height: 530px;
-    background-color: #666;
     padding: 120px 0 30px 0;
 `;
 
@@ -32,7 +31,7 @@ const HeaderBg = function() {
 export default function Header() {
     return(
         <StyledHeader id="headerDiv">
-            <StyledHeaderContent>
+            <StyledHeaderContent className="header">
                 <HeaderBg />
             </StyledHeaderContent>
             <Menu opa={0}/>

@@ -7,14 +7,6 @@ import logo from '../../../image/logo/logo_w_colored.png';
 import $ from 'jquery';
 
 const StyledFooter = styled.footer`
-    position: absolute;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    color: #ded2cf;
-    background: #46413b;
 `;
 
 const StyledFooterDiv = styled.div`
@@ -22,29 +14,15 @@ const StyledFooterDiv = styled.div`
 `;
 
 const StyledLeftSection = styled.section`
-    float: left;
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    line-height: 100%;
-    margin-left: 20px;
+
 `;
 
 const StyledRighSection = styled.section`
-    float: right;
-    padding: 0;
-    margin: 0;
-    height: 125px;
-    padding-top: 25px;
-    margin-right: 30px;
+
 `;
 
 const StyledBottomSection = styled.section`
-    clear: both;
-    display: flex;
-    justify-content: center;
-    height: 120px;
-    line-height: 100px;
+
 `;
 
 const StyledLogoText = styled.p`
@@ -54,11 +32,7 @@ const StyledLogoText = styled.p`
 `;
 
 const StyledMenuDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 100px;
-    line-height: 30px;
+
 `;
 
 const StyledFooterLink = styled.h3`
@@ -133,9 +107,9 @@ const FooterLink = function(props){
 
 const FooterLeftDiv = function() {
     return(
-        <StyledLeftSection>
+        <StyledLeftSection className="l_footer">
             <FooterLogo />
-            <StyledMenuDiv>
+            <StyledMenuDiv className="links">
                 <FooterLink src={"/products"} title={"PRODUCTS"} />
                 <FooterLink src={"/technology"} title={"Technology"} />
                 <FooterLink src={"/contact"} title={"Contact"} />
@@ -161,7 +135,7 @@ const FooterInfo = function(props) {
 
 const FooterRightDiv = function() {
     return(
-        <StyledRighSection>
+        <StyledRighSection className="r_footer">
             <FooterInfo title={"Address: "} desc={"경기도 하남시 검단산로 239 하남시벤처센터 405호"}/>
             <FooterInfo title={"E-mail: "} desc={"soju68@gmail.com"}/>
         </StyledRighSection>
@@ -170,7 +144,7 @@ const FooterRightDiv = function() {
 
 const FooterBottomDiv = function() {
     return(
-        <StyledBottomSection>
+        <StyledBottomSection className="b_footer">
             <p>© Copyright Divus Corp. All rights reserved.</p>
         </StyledBottomSection>
     )
@@ -187,7 +161,7 @@ const SetScrollTop = function() {
 
         $(window).scroll(function() {
             var st = $(this).scrollTop();
-            if(st > offsetHeight * 0.8) btn.style.display = "block";
+            if(st > offsetHeight * 0.2) btn.style.display = "block";
             else btn.style.display = "none";
         });
     })
@@ -198,7 +172,7 @@ const SetScrollTop = function() {
 
 export default function Footer() {
     return(
-        <StyledFooter>
+        <StyledFooter className="footer">
             <StyledFooterDiv>
                 <FooterLeftDiv />
                 <FooterRightDiv />
