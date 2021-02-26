@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import logo from '../../../image/logo/logo_w_colored.png';
+import logo from '../../image/logo/circleLogo.png';
 
 import $ from 'jquery';
 
@@ -16,7 +16,7 @@ const StyledMenuBar = styled.div`
     width: 100%;
     padding: 44px 0 44px 0;
     background-color: rgba(0,0,0,0);
-    z-index: 99;
+    z-index: 299;
 `;
 
 const StyledMenuLogo = styled.div`
@@ -66,14 +66,19 @@ const StyledHiddenMenuLinks = styled.div`
     padding: 20px 0 20px 40px;
 `;
 
+const imgStyle = {
+    width: "90px",
+    padding: "0px 0px 0px 40px"
+}
+
 const linkStyle = {
     padding: "12px 30px 12px 30px",
     color: "#fff",
     textDecoration: "none",
 };
 
-const MenuLink = function(props) {
-    return(
+const MenuLink = function (props) {
+    return (
         <NavLink className="linkClass" style={linkStyle} activeClassName={"m_selected"} to={props.src}>
             <StyledLink>{props.title}</StyledLink>
         </NavLink>
@@ -81,7 +86,7 @@ const MenuLink = function(props) {
 };
 
 export default function Menu(props) {
-    useEffect(function(){
+    useEffect(function () {
         var stHeader = $("#headerDiv")[0].scrollHeight,
             stMenu = $("#menuBar")[0].scrollHeight,
             stM = stHeader - stMenu,
@@ -90,23 +95,29 @@ export default function Menu(props) {
             opa = props.opa,
             bgOpa = 0;
 
-        if(!$(this).scrollTop()){
+        if (!$(this).scrollTop()) {
             opa = props.opa;
             bgOpa = 0;
         }
 
-        $("#hiddenBtn").off().on("click", ()=>{
-            if(!$("#hiddenMenuLinks")[0].style.visibility || $("#hiddenMenuLinks")[0].style.visibility === "hidden") $("#hiddenMenuLinks").css({visibility: "visible"});
+        $("#hiddenBtn").off().on("click", () => {
+            if (!$("#hiddenMenuLinks")[0].style.visibility || $("#hiddenMenuLinks")[0].style.visibility === "hidden") $("#hiddenMenuLinks").css({ visibility: "visible" });
             else $("#hiddenMenuLinks")[0].style.visibility = "hidden"
         })
 
         $("#hiddenMenuLinks").on("mouseleave", () => $("#hiddenMenuLinks")[0].style.visibility = "hidden");
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
+            $(".linkClass").on("click", function () {
+                $(window).scrollTop(0);
+                $("#menuBar").css({
+                    top: 0
+                })
+            })
             var st = $(this).scrollTop();
 
-            if(st > stM){
-                if(fst > st) {
+            if (st > stM) {
+                if (fst > st) {
                     bgOpa = 0.8;
                     $("#menuBar").css({
                         position: "fixed",
@@ -119,10 +130,10 @@ export default function Menu(props) {
 
                     mt += 10;
                     opa += 0.05;
-                    if(mt >= 0) mt = 0;
-                    if(opa >= 1) opa = 1;
-                }else{
-                    if(fst > stHeader){
+                    if (mt >= 0) mt = 0;
+                    if (opa >= 1) opa = 1;
+                } else {
+                    if (fst > stHeader) {
                         $("#menuBar").css({
                             position: "fixed",
                             top: mt,
@@ -130,14 +141,14 @@ export default function Menu(props) {
                         $("#menuLogo").css({
                             opacity: opa
                         });
-    
+
                         mt -= 10;
                         opa -= 0.2;
-                        if(mt <= -stMenu) mt = -stMenu;
-                        if(opa <= 0) opa = 0;
+                        if (mt <= -stMenu) mt = -stMenu;
+                        if (opa <= 0) opa = 0;
                     }
                 }
-            }else{
+            } else {
                 $("#menuBar").css({
                     position: "relative",
                     top: 0,
@@ -146,26 +157,26 @@ export default function Menu(props) {
                 $("#menuLogo").css({
                     opacity: opa
                 });
-    
+
                 mt = -stMenu;
                 opa -= 0.1;
                 bgOpa -= 0.1;
-                if(opa <= 0) opa = 0; 
-                if(bgOpa <= 0) opa = 0;
+                if (opa <= 0) opa = 0;
+                if (bgOpa <= 0) opa = 0;
             }
             fst = st;
 
-            if(st <= 0) bgOpa = 0;
+            if (st <= 0) bgOpa = 0;
         })
     })
     return (
         <StyledMenu id={"menu"}>
             <StyledMenuBar id={"menuBar"}>
                 <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
-                    <a className="linkClass" href="/"><img id={"logo"} src={logo} alt="logo" /></a>
+                    <Link className="linkClass" to="/"><img style={imgStyle} id={"logo"} src={logo} alt="logo" /></Link>
                 </StyledMenuLogo>
                 <StyledMenuLinks id="menuLinks">
-                    <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>
+                    <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
                     <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
                     <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
                     <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
@@ -173,7 +184,7 @@ export default function Menu(props) {
                 <StyledHiddenMenu id="hiddenMenu">
                     <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
                     <StyledHiddenMenuLinks id="hiddenMenuLinks">
-                        <MenuLink src={"/products"} title={"PRODUCTS"} opa={1}/>
+                        <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
                         <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
                         <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
                         <MenuLink src={"/service"} title={"SERVICE"} opa={1} />

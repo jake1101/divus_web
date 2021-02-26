@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Menu from '../../public/Menu';
+import Menu from '../publicComp/Menu';
 
 const StyledPubHeader = styled.div`
     height: 137px;
@@ -24,7 +24,7 @@ export default function Header(props) {
     return (
         <header className="othHeader">
             <StyledPubHeader id={"headerDiv"}>
-                <Menu opa={1}/>
+                <Menu opa={1} />
             </StyledPubHeader>
             <StyledTopArticle>
                 <StyledTitleH1>{props.f}<br />{props.l}</StyledTitleH1>

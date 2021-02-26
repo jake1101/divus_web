@@ -1,8 +1,8 @@
 import React from 'react';
-import Menu from '../public/Menu';
+import Menu from '../publicComp/Menu';
 import styled from 'styled-components';
 
-import bg from '../../../image/type2.gif';
+import bg from '../../image/type2.gif';
 
 const StyledHeader = styled.header`
     height: 727px;
@@ -22,19 +22,19 @@ const StyledBgImg = styled.img`
     border-radius: 100px;
 `;
 
-const HeaderBg = function() {
-    return(
+const HeaderBg = function () {
+    return (
         <StyledBgImg src={bg} alt="backgroundgjf" />
     )
 }
 
 export default function Header() {
-    return(
+    return (
         <StyledHeader id="headerDiv">
             <StyledHeaderContent className="header">
                 <HeaderBg />
             </StyledHeaderContent>
-            <Menu opa={0}/>
+            <Menu opa={0} />
         </StyledHeader>
     )
 }

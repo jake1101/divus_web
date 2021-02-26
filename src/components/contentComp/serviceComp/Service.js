@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from '../header/Header'
-import Footer from '../../public/Footer';
+import Header from '../Header'
+import Footer from '../../publicComp/Footer';
 
 const StyledContentWrap = styled.div`
     padding: 30px 20% 120px 20%;
@@ -32,7 +32,7 @@ const StyledLinkBtn = styled.h2`
 export default function Service() {
     return (
         <div id="content">
-            <Header f={"AUTHENTICATED USERS"} l={"CAN DEMONSTRATE THE PRODUCT."}/>
+            <Header f={"AUTHENTICATED USERS"} l={"CAN DEMONSTRATE THE PRODUCT."} />
             <StyledContentWrap className="service">
                 <SytledContentDiv>
                     <StyledTextH2>승인된 사용자만 이용할 수 있는 페이지 입니다.</StyledTextH2>

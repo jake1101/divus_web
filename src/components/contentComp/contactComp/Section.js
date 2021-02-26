@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import $ from 'jquery';
@@ -69,7 +69,7 @@ export default function Section() {
             fontSize: "30px"
         })
 
-        if(!e.target.value) {
+        if (!e.target.value) {
             $(e.target).css({
                 fontSize: "60px",
             })

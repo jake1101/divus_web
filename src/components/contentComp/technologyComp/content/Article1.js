@@ -21,10 +21,6 @@ const StyledTitle = styled.h2`
     padding-top: 20px;
 `;
 
-const StyledSub = styled.h2`
-
-`;
-
 const StyledAppWrap = styled.div`
     border-bottom: 1px solid white;
     padding: 30px;
@@ -86,11 +82,11 @@ const StyledAppImg = styled.img`
 `;
 
 export default function Article1() {
-    return(
+    return (
         <StyledArticleWrap className="article1">
             <StyledArticleContent>
-            <StyledTitle>AI Architecture</StyledTitle>
-            <StyledAppOs>OS: Linux</StyledAppOs>
+                <StyledTitle>AI Architecture</StyledTitle>
+                <StyledAppOs>OS: Linux</StyledAppOs>
                 <StyledAppWrap>
                     <StyledAppTitle>Machine Learning Applications</StyledAppTitle>
                     <StyledAppContent>
@@ -153,7 +149,7 @@ export default function Article1() {
                         <StyledImgWrap>
                             <StyledAppImgDiv><StyledAppImg src={tensorflow} alt="tensorflow" /></StyledAppImgDiv>
                             <StyledAppImgDiv><StyledAppImg src={keras} alt="keras" /></StyledAppImgDiv>
-                            <StyledAppImgDiv><StyledAppImg src={pytorch} alt="pytorch" /></StyledAppImgDiv> 
+                            <StyledAppImgDiv><StyledAppImg src={pytorch} alt="pytorch" /></StyledAppImgDiv>
                             <StyledAppImgDiv><StyledAppImg src={caffe2} alt="caffe2" /></StyledAppImgDiv>
                             <StyledAppImgDiv><StyledAppImg src={theano} alt="theano" /></StyledAppImgDiv>
                         </StyledImgWrap>
