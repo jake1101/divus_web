@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import car1 from '../../../../../image/technologyImgs/article/car1.png';
-import car2 from '../../../../../image/technologyImgs/article/car2.png';
-import car3 from '../../../../../image/technologyImgs/article/car3.png';
-import car4 from '../../../../../image/technologyImgs/article/car4.png';
+import car1 from '../../../../image/technologyImgs/article/car1.png';
+import car2 from '../../../../image/technologyImgs/article/car2.png';
+import car3 from '../../../../image/technologyImgs/article/car3.png';
+import car4 from '../../../../image/technologyImgs/article/car4.png';
 
 const StyledArticleWrap = styled.article`
     padding: 30px 20% 30px 20%;
@@ -47,25 +47,25 @@ export default function Article2() {
                     <StyledContentTitle>운수(택시) Doctor Car 시범 사업</StyledContentTitle>
                     <StyledContentDiv>
                         <StyledContentImg src={car1} alt="car1" />
-                        </StyledContentDiv>
+                    </StyledContentDiv>
                 </StyledContent>
                 <StyledContent>
                     <StyledContentTitle>랜터카(공유자동차)</StyledContentTitle>
                     <StyledContentDiv>
                         <StyledContentImg src={car2} alt="car2" />
-                        </StyledContentDiv>
+                    </StyledContentDiv>
                 </StyledContent>
                 <StyledContent>
                     <StyledContentTitle>자동차 수리 업체용</StyledContentTitle>
                     <StyledContentDiv>
                         <StyledContentImg src={car3} alt="car3" />
-                        </StyledContentDiv>
+                    </StyledContentDiv>
                 </StyledContent>
                 <StyledContent>
                     <StyledContentTitle>주차관제업체용</StyledContentTitle>
                     <StyledContentDiv>
                         <StyledContentImg src={car4} alt="car4" />
-                        </StyledContentDiv>
+                    </StyledContentDiv>
                 </StyledContent>
             </StyledArticleContent>
         </StyledArticleWrap>

@@ -67,130 +67,133 @@ const StyledHiddenMenuLinks = styled.div`
 `;
 
 const imgStyle = {
-    width: "90px",
-    padding: "0px 0px 0px 40px"
+  width: "90px",
+  padding: "0px 0px 0px 40px"
 }
 
 const linkStyle = {
-    padding: "12px 30px 12px 30px",
-    color: "#fff",
-    textDecoration: "none",
+  padding: "12px 30px 12px 30px",
+  color: "#fff",
+  textDecoration: "none",
 };
 
 const MenuLink = function (props) {
-    return (
-        <NavLink className="linkClass" style={linkStyle} activeClassName={"m_selected"} to={props.src}>
-            <StyledLink>{props.title}</StyledLink>
-        </NavLink>
-    )
+  return (
+    <NavLink className="linkClass" style={linkStyle} activeClassName={"m_selected"} to={props.src}>
+      <StyledLink>{props.title}</StyledLink>
+    </NavLink>
+  )
 };
 
 export default function Menu(props) {
-    useEffect(function () {
-        var stHeader = $("#headerDiv")[0].scrollHeight,
-            stMenu = $("#menuBar")[0].scrollHeight,
-            stM = stHeader - stMenu,
-            mt = -stMenu,
-            fst = 0,
-            opa = props.opa,
-            bgOpa = 0;
+  useEffect(function () {
+    var stHeader = $("#headerDiv")[0].scrollHeight,
+      stMenu = $("#menuBar")[0].scrollHeight,
+      stM = stHeader - stMenu,
+      mt = -stMenu,
+      fst = 0,
+      opa = props.opa,
+      bgOpa = 0;
 
-        if (!$(this).scrollTop()) {
-            opa = props.opa;
-            bgOpa = 0;
-        }
+    if (!$(this).scrollTop()) {
+      opa = props.opa;
+      bgOpa = 0;
+    }
 
-        $("#hiddenBtn").off().on("click", () => {
-            if (!$("#hiddenMenuLinks")[0].style.visibility || $("#hiddenMenuLinks")[0].style.visibility === "hidden") $("#hiddenMenuLinks").css({ visibility: "visible" });
-            else $("#hiddenMenuLinks")[0].style.visibility = "hidden"
-        })
-
-        $("#hiddenMenuLinks").on("mouseleave", () => $("#hiddenMenuLinks")[0].style.visibility = "hidden");
-
-        $(window).scroll(function () {
-            $(".linkClass").on("click", function () {
-                $(window).scrollTop(0);
-                $("#menuBar").css({
-                    top: 0
-                })
-            })
-            var st = $(this).scrollTop();
-
-            if (st > stM) {
-                if (fst > st) {
-                    bgOpa = 0.8;
-                    $("#menuBar").css({
-                        position: "fixed",
-                        top: mt,
-                        backgroundColor: `rgba(102,102,102,${bgOpa})`
-                    });
-                    $("#menuLogo").css({
-                        opacity: opa
-                    });
-
-                    mt += 10;
-                    opa += 0.05;
-                    if (mt >= 0) mt = 0;
-                    if (opa >= 1) opa = 1;
-                } else {
-                    if (fst > stHeader) {
-                        $("#menuBar").css({
-                            position: "fixed",
-                            top: mt,
-                        });
-                        $("#menuLogo").css({
-                            opacity: opa
-                        });
-
-                        mt -= 10;
-                        opa -= 0.2;
-                        if (mt <= -stMenu) mt = -stMenu;
-                        if (opa <= 0) opa = 0;
-                    }
-                }
-            } else {
-                $("#menuBar").css({
-                    position: "relative",
-                    top: 0,
-                    backgroundColor: `rgba(102,102,102,${bgOpa})`
-                });
-                $("#menuLogo").css({
-                    opacity: opa
-                });
-
-                mt = -stMenu;
-                opa -= 0.1;
-                bgOpa -= 0.1;
-                if (opa <= 0) opa = 0;
-                if (bgOpa <= 0) opa = 0;
-            }
-            fst = st;
-
-            if (st <= 0) bgOpa = 0;
-        })
+    $("#hiddenBtn").off().on("click", () => {
+      if (!$("#hiddenMenuLinks")[0].style.visibility || $("#hiddenMenuLinks")[0].style.visibility === "hidden") $("#hiddenMenuLinks").css({ visibility: "visible" });
+      else $("#hiddenMenuLinks")[0].style.visibility = "hidden"
     })
-    return (
-        <StyledMenu id={"menu"}>
-            <StyledMenuBar id={"menuBar"}>
-                <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
-                    <Link className="linkClass" to="/"><img style={imgStyle} id={"logo"} src={logo} alt="logo" /></Link>
-                </StyledMenuLogo>
-                <StyledMenuLinks id="menuLinks">
-                    <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
-                    <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
-                    <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
-                    <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
-                </StyledMenuLinks>
-                <StyledHiddenMenu id="hiddenMenu">
-                    <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
-                    <StyledHiddenMenuLinks id="hiddenMenuLinks">
-                        <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
-                        <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
-                        <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
-                        <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
-                    </StyledHiddenMenuLinks>
-                </StyledHiddenMenu>
-            </StyledMenuBar>
-        </StyledMenu>
-    )
+
+    $("#hiddenMenuLinks").on("mouseleave", () => $("#hiddenMenuLinks")[0].style.visibility = "hidden");
+
+    $(window).scroll(function () {
+      $(".linkClass").on("click", function () {
+        $(window).scrollTop(0);
+        $("#menuBar").css({
+          top: 0
+        })
+      })
+      var st = $(this).scrollTop();
+
+      if (st > stM) {
+        if (fst > st) {
+          bgOpa = 0.8;
+          $("#menuBar").css({
+            position: "fixed",
+            top: mt,
+            backgroundColor: `rgba(102,102,102,${bgOpa})`
+          });
+          $("#menuLogo").css({
+            opacity: opa
+          });
+
+          mt += 10;
+          opa += 0.05;
+          if (mt >= 0) mt = 0;
+          if (opa >= 1) opa = 1;
+        } else {
+          if (fst > stHeader) {
+            $("#menuBar").css({
+              position: "fixed",
+              top: mt,
+            });
+            $("#menuLogo").css({
+              opacity: opa
+            });
+
+            mt -= 10;
+            opa -= 0.2;
+            if (mt <= -stMenu) mt = -stMenu;
+            if (opa <= 0) opa = 0;
+          }
+        }
+      } else {
+        $("#menuBar").css({
+          position: "relative",
+          top: 0,
+          backgroundColor: `rgba(102,102,102,${bgOpa})`
+        });
+        $("#menuLogo").css({
+          opacity: opa
+        });
+
+        mt = -stMenu;
+        opa -= 0.1;
+        bgOpa -= 0.1;
+        if (opa <= 0) opa = 0;
+        if (bgOpa <= 0) opa = 0;
+      }
+      fst = st;
+
+      if (st <= 0) {
+        bgOpa = 0;
+        fst = 0;
+      }
+    })
+  })
+  return (
+    <StyledMenu id={"menu"}>
+      <StyledMenuBar id={"menuBar"}>
+        <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
+          <Link className="linkClass" to="/"><img style={imgStyle} id={"logo"} src={logo} alt="logo" /></Link>
+        </StyledMenuLogo>
+        <StyledMenuLinks id="menuLinks">
+          <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
+          <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+          <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+          <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
+        </StyledMenuLinks>
+        <StyledHiddenMenu id="hiddenMenu">
+          <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
+          <StyledHiddenMenuLinks id="hiddenMenuLinks">
+            <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
+            <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+            <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+            <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
+          </StyledHiddenMenuLinks>
+        </StyledHiddenMenu>
+      </StyledMenuBar>
+    </StyledMenu>
+  )
 }

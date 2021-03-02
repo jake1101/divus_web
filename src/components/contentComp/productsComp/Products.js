@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from '../header/Header';
-import PageLinkComp from './contents/PageLinkComp'
-import Footer from '../../public/Footer';
+import Header from '../Header';
+import PageLinkComp from './content/PageLinkComp'
+import Footer from '../../publicComp/Footer';
 import Section from './Section';
 
 export default function Products() {
@@ -12,7 +12,7 @@ export default function Products() {
     }
     return (
         <div id="content">
-            <Header {...props}/>
+            <Header {...props} />
             <PageLinkComp />
             <Section />
             <Footer />

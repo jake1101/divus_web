@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import tensorflow from '../../../../../image/technologyImgs/article/tensorflow.png';
-import keras from '../../../../../image/technologyImgs/article/keras.png';
-import pytorch from '../../../../../image/technologyImgs/article/pytorch.png';
-import caffe2 from '../../../../../image/technologyImgs/article/caffe2.png';
-import theano from '../../../../../image/technologyImgs/article/theano.png';
+import tensorflow from '../../../../image/technologyImgs/article/tensorflow.png';
+import keras from '../../../../image/technologyImgs/article/keras.png';
+import pytorch from '../../../../image/technologyImgs/article/pytorch.png';
+import caffe2 from '../../../../image/technologyImgs/article/caffe2.png';
+import theano from '../../../../image/technologyImgs/article/theano.png';
 
 const StyledArticleWrap = styled.article`
     padding: 30px 20% 30px 20%;

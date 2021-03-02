@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import imgSrc from '../../../../../image/productsImgs/article/u105.png'
+import imgSrc from '../../../../image/productsImgs/article/u105.png'
 
 const StyledTopArticle = styled.div`
 `;

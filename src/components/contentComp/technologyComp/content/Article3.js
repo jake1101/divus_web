@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import factory from '../../../../../image/technologyImgs/article/factory.png';
+import factory from '../../../../image/technologyImgs/article/factory.png';
 
 const StyledArticleWrap = styled.article`
     padding: 60px 20% 120px 20%;

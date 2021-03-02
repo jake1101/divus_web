@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from '../header/Header'
-import Footer from '../../public/Footer';
+import Header from '../Header'
+import Footer from '../../publicComp/Footer';
 import Section from './Section';
 
 export default function Technology() {
