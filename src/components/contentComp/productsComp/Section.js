@@ -45,7 +45,7 @@ export default function Section() {
 
     return (
         <StyledSection>
-            <StyledArticleWrap>
+            <StyledArticleWrap className="productsArticle">
                 <StyledTopArticle>
                     <TopContent />
                 </StyledTopArticle>

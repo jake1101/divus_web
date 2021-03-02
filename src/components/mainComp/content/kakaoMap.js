@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const { daum } = window;
 
 const StyledMapWrap = styled.div`
-    padding: 60px 20% 60px 20%;
+    padding: 100px 25% 100px 25%;
 `;
 
 const StyledMapDiv = styled.div`
@@ -15,7 +15,6 @@ const StyledMapDiv = styled.div`
 function MapContent() {
   useEffect(() => {
     const map = document.getElementsByClassName("wrap_map");
-    console.log(map.length);
     if (!map.length) {
       new daum.roughmap.Lander({
         "timestamp": "1612976515378",

@@ -6,7 +6,7 @@ import Footer from '../../publicComp/Footer';
 
 export default function Contact() {
     return (
-        <div id="content">
+        <div className="content">
             <Header f={"IF YOU HAVE ANY QUESTIONS,"} l={"WE WILL CONTACT YOU."} />
             <Section />
             <Footer />

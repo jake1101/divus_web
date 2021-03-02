@@ -87,7 +87,100 @@ const MenuLink = function (props) {
 
 export default function Menu(props) {
   useEffect(function () {
-    var stHeader = $("#headerDiv")[0].scrollHeight,
+    var didScroll;
+    var menu = document.querySelector("#menu")
+    var headerH = document.querySelector(".header").offsetHeight;
+    var menuH = menu.offsetHeight;
+
+    var fst = 0;
+    var ctr = 0;
+
+    var hiddenBtn = document.getElementById("hiddenBtn");
+    var hiddenMenuLinks = document.getElementById("hiddenMenuLinks");
+
+    menu.style.top = headerH + "px";
+
+    window.onscroll = function () {
+      scrolled();
+      didScroll = true;
+    }
+
+    setInterval(function () {
+      if (didScroll) {
+        didScroll = false;
+      }
+    }, 250)
+
+    const scrolled = function () {
+      var st = window.scrollY;
+
+      if (st > headerH) {
+        if (fst > st) {
+          menu.style.backgroundColor = "black";
+          menu.style.position = "fixed";
+          menu.style.top = ctr + "px";
+
+          ctr += 10;
+          if (ctr >= 0) ctr = 0;
+        }
+        if (st > fst) {
+          console.log(ctr);
+
+          menu.style.position = "fixed";
+          menu.style.top = ctr + "px";
+
+          ctr -= 10;
+          if (ctr <= -menuH) ctr = -menuH;
+        }
+      } else {
+        menu.style.position = "absolute";
+        menu.style.top = headerH + "px";
+        menu.style.backgroundColor = "rgba(0, 0, 0, 0)"
+      }
+
+      fst = st;
+    }
+
+    hiddenBtn.addEventListener("click", function () {
+      if (!hiddenMenuLinks.style.visibility || hiddenMenuLinks.style.visibility === "hidden") {
+        console.log(hiddenMenuLinks.style.visibility);
+        hiddenMenuLinks.style.visibility = "visible";
+      } else hiddenMenuLinks.style.visibility = "hidden";
+    })
+
+    hiddenMenuLinks.addEventListener("mouseleave", function () {
+      hiddenMenuLinks.style.visibility = "hidden";
+    })
+  })
+  return (
+    <StyledMenu id={"menu"}>
+      <StyledMenuBar id={"menuBar"}>
+        <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
+          <Link className="linkClass" to="/"><img style={imgStyle} id={"logo"} src={logo} alt="logo" /></Link>
+        </StyledMenuLogo>
+        <StyledMenuLinks id="menuLinks">
+          <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
+          <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+          <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+          <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
+        </StyledMenuLinks>
+        <StyledHiddenMenu id="hiddenMenu">
+          <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
+          <StyledHiddenMenuLinks id="hiddenMenuLinks">
+            <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
+            <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
+            <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
+            <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
+          </StyledHiddenMenuLinks>
+        </StyledHiddenMenu>
+      </StyledMenuBar>
+    </StyledMenu>
+  )
+}
+
+/*
+
+ var stHeader = $(".headerDiv")[0].scrollHeight,
       stMenu = $("#menuBar")[0].scrollHeight,
       stM = stHeader - stMenu,
       mt = -stMenu,
@@ -171,29 +264,6 @@ export default function Menu(props) {
         fst = 0;
       }
     })
-  })
-  return (
-    <StyledMenu id={"menu"}>
-      <StyledMenuBar id={"menuBar"}>
-        <StyledMenuLogo id={"menuLogo"} opa={props.opa}>
-          <Link className="linkClass" to="/"><img style={imgStyle} id={"logo"} src={logo} alt="logo" /></Link>
-        </StyledMenuLogo>
-        <StyledMenuLinks id="menuLinks">
-          <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
-          <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
-          <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
-          <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
-        </StyledMenuLinks>
-        <StyledHiddenMenu id="hiddenMenu">
-          <StyledHiddenMenuBtn id="hiddenBtn">MENU</StyledHiddenMenuBtn>
-          <StyledHiddenMenuLinks id="hiddenMenuLinks">
-            <MenuLink src={"/products"} title={"PRODUCTS"} opa={1} />
-            <MenuLink src={"/technology"} title={"TECHNOLOGY"} opa={1} />
-            <MenuLink src={"/contact"} title={"CONTACT"} opa={1} />
-            <MenuLink src={"/service"} title={"SERVICE"} opa={1} />
-          </StyledHiddenMenuLinks>
-        </StyledHiddenMenu>
-      </StyledMenuBar>
-    </StyledMenu>
-  )
-}
+
+
+*/

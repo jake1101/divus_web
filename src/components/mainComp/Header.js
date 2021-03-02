@@ -30,7 +30,7 @@ const HeaderBg = function () {
 
 export default function Header() {
     return (
-        <StyledHeader id="headerDiv">
+        <StyledHeader className="headerDiv">
             <StyledHeaderContent className="header">
                 <HeaderBg />
             </StyledHeaderContent>

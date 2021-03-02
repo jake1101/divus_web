@@ -23,40 +23,18 @@ div, span, p, a, h1, h2, h3 {
     border: none;
 }
 
+.headerDiv {
+    position: relative;
+}
+
+#menu {
+    width: 100%;
+    position: absolute;
+    z-index: 301;
+}
+
 .header {
     background-color: #666;
-}
-
-.othHeader {
-    
-}
-
-.contact {
-
-}
-
-.service {
-
-}
-
-.greet {
-
-}
-
-.article1{
-    
-}
-
-.article2{
-
-}
-
-.article3{
-
-}
-
-.article4{
-    
 }
 
 .footer {
@@ -104,7 +82,7 @@ div, span, p, a, h1, h2, h3 {
     line-height: 100px;
 }
 
-#content {
+.content {
     width: 100%;
     background-color: #666666;
     color: #fff;
@@ -124,7 +102,129 @@ div, span, p, a, h1, h2, h3 {
     border-bottom: 3px solid white;
 }
 
+@media (max-width: 1000px) {
+    .headerDiv {
+        height: 137px !important;
+        width: 100%;
+        display: inline-block;
+    }
+    .header {
+        height: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header img {
+        box-shadow: none;
+    }
+
+    .greetTxt {
+        display: none;
+    }
+    #menuLogo {
+        opacity: 1;
+        padding: 0;
+    }
+
+    .article1 {
+        padding: 30px 0 30px 0 !important;
+    }
+
+    .article2 {
+        padding: 30px !important;
+    }
+
+    .article3 {
+        padding: 30px !important;
+    }
+
+    .footer {
+        height: 500px !important;
+        text-align: center;
+    }
+
+    .l_footer {
+        float: none;
+        margin: 0;
+        display: inline-block !important;
+    }
+
+    .l_footer p {
+        width: 90%;
+    }
+
+    .l_footer > .links {
+        display: flex !important;
+        width: 100%;
+    }
+
+    .r_footer {
+        float: none;
+        padding: 50px 0 0 0 !important;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .b_footer {
+        float: none !important;
+        display: block;
+        padding: 0 !important;
+    }
+
+    #setSclBtn {
+        left: 85%;
+        z-index: 300;
+    }
+
+    .pageLinkComp {
+        display: none !important;
+    }
+
+    .productsArticle img {
+        width: 100%;
+    }
+
+    .productsArticle iframe {
+        width: 100%;
+    }
+
+    .technologySection .appContent1 {
+        display: inline-block;
+        justify-content: unset;
+    }
+
+    .technologySection .appContent1 > div {
+        margin: 30px 20px;
+    }
+
+    .technologySection .appContent2 {
+        display: inline-block;
+        justify-content: unset;
+    }
+
+    .technologySection .appContent2 > div {
+        margin: 30px 20px;
+    }
+
+    .serviceH2 {
+        font-size: 30px !important;
+        padding: 0 0 60px 0;
+    }
+
+    .serviceBtn {
+        margin: 0 0 60px 0 !important;
+    }
+
+    .loginDiv {
+        width: 100% !important;
+    }
+}
+
 @media (max-width: 1320px) {
+    #menuLogo {
+        opacity: 1;
+        padding: 0;
+    }
+
     #menuLinks {
         visibility: hidden;
     }

@@ -10,7 +10,7 @@ const StyledSection = styled.section`
 
 export default function Section() {
     return (
-        <StyledSection>
+        <StyledSection className="technologySection">
             <Article1 />
             <Article2 />
             <Article3 />

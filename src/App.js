@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainPage from './components/mainComp/MainPage';
 import Products from './components/contentComp/productsComp/Products';
 import Technology from './components/contentComp/technologyComp/Technology';
-import contact from './components/contentComp/contactComp/Contact';
-import service from './components/contentComp/serviceComp/Service';
+import Contact from './components/contentComp/contactComp/Contact';
+import Service from './components/contentComp/serviceComp/Service';
+import Intro from './components/contentComp/introComp/Intro';
 
 export default function App() {
     return (
@@ -15,8 +16,9 @@ export default function App() {
                     <Route exact path="/" component={MainPage}></Route>
                     <Route path="/products" component={Products}></Route>
                     <Route path="/technology" component={Technology}></Route>
-                    <Route path="/contact" component={contact}></Route>
-                    <Route path="/service" component={service}></Route>
+                    <Route path="/contact" component={Contact}></Route>
+                    <Route path="/service" component={Service}></Route>
+                    <Route path="/intro" component={Intro}></Route>
                     <Route path="/">Not found</Route>
                 </Switch>
             </BrowserRouter>

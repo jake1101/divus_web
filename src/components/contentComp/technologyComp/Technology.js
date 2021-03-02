@@ -6,7 +6,7 @@ import Section from './Section';
 
 export default function Technology() {
     return (
-        <div id="content">
+        <div className="content">
             <Header f={"IT IS OUR TECHNOLOGY"} l={"FOR THE FUTURE."} />
             <Section />
             <Footer />

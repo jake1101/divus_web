@@ -10,12 +10,11 @@ import Slider from "react-slick";
 
 const StyledSlideWrap = styled.div`
     background-color: #46413b;
-    padding: 60px 20% 30px 20%;
+    padding: 100px 25% 100px 25%;
 `;
 
-const slideDivStyle = {
-  display: "flex",
-  justifyContent: "center"
+const slideImgStyle = {
+  width: "100%"
 };
 
 function SlideImg() {
@@ -32,17 +31,17 @@ function SlideImg() {
   return (
     <StyledSlideWrap className="article2">
       <Slider {...settings}>
-        <div style={slideDivStyle}>
-          <img className="slImg" src={slide1} alt="article" />
+        <div>
+          <img style={slideImgStyle} className="slImg" src={slide1} alt="article" />
         </div>
-        <div style={slideDivStyle}>
-          <img className="slImg" src={slide2} alt="article" />
+        <div>
+          <img style={slideImgStyle} className="slImg" src={slide2} alt="article" />
         </div>
-        <div style={slideDivStyle}>
-          <img className="slImg" src={slide3} alt="article" />
+        <div>
+          <img style={slideImgStyle} className="slImg" src={slide3} alt="article" />
         </div>
-        <div style={slideDivStyle}>
-          <img className="slImg" src={slide4} alt="article" />
+        <div>
+          <img style={slideImgStyle} className="slImg" src={slide4} alt="article" />
         </div>
       </Slider>
     </StyledSlideWrap>

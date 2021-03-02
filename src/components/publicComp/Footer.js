@@ -110,7 +110,7 @@ const FooterLeftDiv = function () {
     <StyledLeftSection className="l_footer">
       <FooterLogo />
       <StyledMenuDiv className="links">
-        <FooterLink src={"/"} title={"회사소개"} />
+        <FooterLink src={"/intro"} title={"회사소개"} />
         <FooterLink src={"/"} title={"위치"} />
         <Link to={"/contact"} className={"linkClass"}>
           <StyledFooterLink>문의</StyledFooterLink>
@@ -174,16 +174,10 @@ const SetScrollTop = function () {
 export default function Footer() {
   useEffect(() => {
     $(".fLink").off().on("click", function () {
-      if ($(this)[0].innerText === "회사소개") localStorage.setItem("key", "introduce");
-      else localStorage.setItem("key", "location")
+      if ($(this)[0].innerText === "위치") localStorage.setItem("key", "location");
     })
 
-    if (localStorage.getItem("key") === "introduce") {
-      console.log($("#arti3")[0].offsetTop);
-      window.scrollTo({ top: $("#arti1")[0].offsetTop, left: 0, behavior: 'smooth' });
-    }
-    else if (localStorage.getItem("key") === "location") {
-      console.log($("#arti3")[0].offsetTop);
+    if (localStorage.getItem("key") === "location") {
       window.scrollTo({ top: $("#arti3")[0].offsetTop, left: 0, behavior: 'smooth' });
     }
     else localStorage.clear();

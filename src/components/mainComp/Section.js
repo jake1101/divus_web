@@ -16,7 +16,6 @@ const StyledGreeting = styled.div`
 `;
 
 const StyledArticle = styled.article`
-
 `;
 
 export default function Section() {

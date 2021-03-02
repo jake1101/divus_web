@@ -44,11 +44,12 @@ const StyledTextarea = styled.textarea`
     height: 150px;
     display: block;
     position: relative;
+    resize: none;
 `;
 
 const StyledSubmitBtnDiv = styled.div`
     text-align: right;
-    margin: 100px 0;
+    margin: 30px 0;
 `;
 
 const StyledSubmitBtn = styled.input`

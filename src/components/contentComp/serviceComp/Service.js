@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Header from '../Header'
+import Header from '../Header';
+import DemoLogin from './DemoLogin';
 import Footer from '../../publicComp/Footer';
 
 const StyledContentWrap = styled.div`
@@ -30,20 +31,21 @@ const StyledLinkBtn = styled.h2`
 `;
 
 export default function Service() {
-    return (
-        <div id="content">
-            <Header f={"AUTHENTICATED USERS"} l={"CAN DEMONSTRATE THE PRODUCT."} />
-            <StyledContentWrap className="service">
-                <SytledContentDiv>
-                    <StyledTextH2>승인된 사용자만 이용할 수 있는 페이지 입니다.</StyledTextH2>
-                    <NavLink to={"/contact"} activeClassName={"f_selected"}>
-                        <StyledLinkBtn>
-                            문의하기
-                        </StyledLinkBtn>
-                    </NavLink>
-                </SytledContentDiv>
-            </StyledContentWrap>
-            <Footer />
-        </div>
-    )
+  return (
+    <div className="content">
+      <Header f={"AUTHENTICATED USERS"} l={"CAN DEMONSTRATE THE PRODUCT."} />
+      <StyledContentWrap className="service">
+        <SytledContentDiv>
+          <StyledTextH2 className="serviceH2">승인된 사용자만 이용할 수 있는 페이지 입니다.</StyledTextH2>
+          <NavLink to={"/contact"} activeClassName={"f_selected"}>
+            <StyledLinkBtn className="serviceBtn">
+              문의하기
+            </StyledLinkBtn>
+          </NavLink>
+          <DemoLogin />
+        </SytledContentDiv>
+      </StyledContentWrap>
+      <Footer />
+    </div>
+  )
 }

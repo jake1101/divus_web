@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import articleImg from '../../../image/article/article1.png';
 
 const StyledArticleWrap = styled.div`
-    padding: 160px 20% 60px 20%;
+    padding: 100px 25% 100px 25%;
     background: #111;
 
 `;

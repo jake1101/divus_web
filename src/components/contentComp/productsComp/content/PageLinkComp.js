@@ -12,29 +12,29 @@ const StyledLinksWrap = styled.div`
 
 export default function TopArticle(props) {
 
-    useEffect(function(){
+    useEffect(function () {
         let i = 0;
         const linkTitle = document.getElementsByClassName("linkTitle");
-        
-        for(i; i<linkTitle.length; i++){
-            linkTitle[i].addEventListener("click", function() {
+
+        for (i; i < linkTitle.length; i++) {
+            linkTitle[i].addEventListener("click", function () {
                 const linkWrap = this.parentNode.parentNode.children[1];
 
-                if(linkWrap.style.visibility === "hidden" || !linkWrap.style.visibility){
+                if (linkWrap.style.visibility === "hidden" || !linkWrap.style.visibility) {
                     linkWrap.style.visibility = "visible";
                     linkWrap.addEventListener("mouseleave", () => linkWrap.style.visibility = "hidden");
-                }else{
+                } else {
                     linkWrap.style.visibility = "hidden";
                 }
             })
         }
-        
+
     })
-    
+
     return (
-        <StyledLinksWrap>
-            <PageLink title={"DOCTOR CAR AI"} link={["Damage Detection","Car Segment","Car Part Segment","ANPR"]} />
-            <PageLink title={"DOCTOR FACTORY AI"} link={""}/>
+        <StyledLinksWrap className={"pageLinkComp"}>
+            <PageLink title={"DOCTOR CAR AI"} link={["Damage Detection", "Car Segment", "Car Part Segment", "ANPR"]} />
+            <PageLink title={"DOCTOR FACTORY AI"} link={""} />
         </StyledLinksWrap>
     )
 }

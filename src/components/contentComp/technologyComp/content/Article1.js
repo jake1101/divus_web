@@ -89,7 +89,7 @@ export default function Article1() {
                 <StyledAppOs>OS: Linux</StyledAppOs>
                 <StyledAppWrap>
                     <StyledAppTitle>Machine Learning Applications</StyledAppTitle>
-                    <StyledAppContent>
+                    <StyledAppContent className="appContent1">
                         <StyledAppDiv>
                             <StyledTxt>
                                 Recognition of Damages
@@ -119,7 +119,7 @@ export default function Article1() {
                 </StyledAppWrap>
                 <StyledAppWrap>
                     <StyledAppTitle>Computer Vision Technology</StyledAppTitle>
-                    <StyledAppContent>
+                    <StyledAppContent className="appContent2">
                         <StyledSmAppDiv>
                             <StyledTxt>Image</StyledTxt>
                         </StyledSmAppDiv>
