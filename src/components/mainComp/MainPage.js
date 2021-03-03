@@ -7,7 +7,7 @@ import Footer from '../publicComp/Footer';
 export default function MainPage() {
   return (
     <div className="content">
-      <Header key="mainPage" />
+      <Header />
       <Section />
       <Footer />
     </div>

@@ -18,7 +18,7 @@ const StyledTopArticle = styled.article`
 const StyledTitleH1 = styled.h1`
     text-align: center;
     font-size: 30px;
-    padding: 300px 0 200px 0;
+    padding: 300px 0 0 0;
 `;
 
 export default function Header(props) {

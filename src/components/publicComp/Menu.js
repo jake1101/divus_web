@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import logo from '../../image/logo/circleLogo.png';
 
-import $ from 'jquery';
-
 const StyledMenu = styled.menu`
     margin: 0;
     padding: 0;
@@ -86,9 +84,10 @@ const MenuLink = function (props) {
 };
 
 export default function Menu(props) {
-  useEffect(function () {
-    var didScroll;
-    var menu = document.querySelector("#menu")
+  useEffect(() => {
+    var fLink = document.querySelector(".fLink");
+    var linkClass = document.getElementsByClassName("linkClass");
+    var menu = document.querySelector("#menu");
     var headerH = document.querySelector(".header").offsetHeight;
     var menuH = menu.offsetHeight;
 
@@ -100,16 +99,20 @@ export default function Menu(props) {
 
     menu.style.top = headerH + "px";
 
-    window.onscroll = function () {
-      scrolled();
-      didScroll = true;
-    }
+    fLink.addEventListener("click", (e) => {
+      menu.style.backgroundColor = "black";
+      menu.style.position = "absolute";
+      menu.style.top = "-137px";
+    })
 
-    setInterval(function () {
-      if (didScroll) {
-        didScroll = false;
+    window.addEventListener("scroll", () => {
+      for (var i = 0; i < linkClass.length; i++) {
+        linkClass[i].addEventListener("click", () => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+        })
       }
-    }, 250)
+      scrolled();
+    });
 
     const scrolled = function () {
       var st = window.scrollY;
@@ -124,8 +127,6 @@ export default function Menu(props) {
           if (ctr >= 0) ctr = 0;
         }
         if (st > fst) {
-          console.log(ctr);
-
           menu.style.position = "fixed";
           menu.style.top = ctr + "px";
 
@@ -143,7 +144,6 @@ export default function Menu(props) {
 
     hiddenBtn.addEventListener("click", function () {
       if (!hiddenMenuLinks.style.visibility || hiddenMenuLinks.style.visibility === "hidden") {
-        console.log(hiddenMenuLinks.style.visibility);
         hiddenMenuLinks.style.visibility = "visible";
       } else hiddenMenuLinks.style.visibility = "hidden";
     })

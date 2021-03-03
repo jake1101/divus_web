@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import logo from '../../image/logo/logo_w_colored.png';
 
-import $ from 'jquery';
-
 const StyledFooter = styled.footer`
 `;
 
@@ -84,7 +82,7 @@ const StyledSetScrollTop = styled.button`
 
 const FooterHomeLink = function () {
   return (
-    <a href="/"><img id={"logo"} src={logo} alt="logo" /></a>
+    <Link to="/"><img id={"logo"} src={logo} alt="logo" /></Link>
   )
 };
 
@@ -110,7 +108,9 @@ const FooterLeftDiv = function () {
     <StyledLeftSection className="l_footer">
       <FooterLogo />
       <StyledMenuDiv className="links">
-        <FooterLink src={"/intro"} title={"회사소개"} />
+        <Link to={"/intro"} className={"linkClass"}>
+          <StyledFooterLink>{"회사소개"}</StyledFooterLink>
+        </Link>
         <FooterLink src={"/"} title={"위치"} />
         <Link to={"/contact"} className={"linkClass"}>
           <StyledFooterLink>문의</StyledFooterLink>
@@ -160,11 +160,11 @@ const SetScrollTop = function () {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     });
 
-    $(window).scroll(function () {
-      var st = $(this).scrollTop();
+    window.addEventListener("scroll", () => {
+      var st = window.scrollY;
       if (st > offsetHeight * 0.2) btn.style.display = "block";
       else btn.style.display = "none";
-    });
+    })
   })
   return (
     <StyledSetScrollTop id="setSclBtn"><i className="fas fa-angle-double-up"></i></StyledSetScrollTop>
@@ -173,14 +173,13 @@ const SetScrollTop = function () {
 
 export default function Footer() {
   useEffect(() => {
-    $(".fLink").off().on("click", function () {
-      if ($(this)[0].innerText === "위치") localStorage.setItem("key", "location");
+    const fLink = document.querySelector(".fLink")
+    fLink.addEventListener("click", () => {
+      localStorage.setItem("key", "location");
     })
-
     if (localStorage.getItem("key") === "location") {
-      window.scrollTo({ top: $("#arti3")[0].offsetTop, left: 0, behavior: 'smooth' });
-    }
-    else localStorage.clear();
+      window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: 'smooth' })
+    } else localStorage.clear();
 
     localStorage.clear();
   })
@@ -195,3 +194,21 @@ export default function Footer() {
     </StyledFooter>
   )
 }
+
+// useEffect(() => {
+  //   var fLink = document.querySelector(".fLink");
+  //   fLink.addEventListener("click", () => {
+
+  //   });
+
+  //   $(".fLink").off().on("click", function () {
+  //     if ($(this)[0].innerText === "위치") localStorage.setItem("key", "location");
+  //   })
+
+  //   if (localStorage.getItem("key") === "location") {
+  //     window.scrollTo({ top: $("#arti3")[0].offsetTop, left: 0, behavior: 'smooth' });
+  //   }
+  //   else localStorage.clear();
+
+  //   localStorage.clear();
+  // })

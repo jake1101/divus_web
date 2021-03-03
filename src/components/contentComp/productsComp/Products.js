@@ -11,7 +11,7 @@ export default function Products() {
         l: "TRANSFORMING YOUR BUSINESS.",
     }
     return (
-        <div class="content">
+        <div className="content">
             <Header {...props} />
             <PageLinkComp />
             <Section />

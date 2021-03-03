@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import $ from 'jquery';
 
 const StyledArticleWrap = styled.article`
-    padding: 30px 20% 120px 20%;
+    padding: 30px 25% 120px 25%;
     text-align: center;
 `;
 

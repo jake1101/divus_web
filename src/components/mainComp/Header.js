@@ -38,7 +38,3 @@ export default function Header() {
         </StyledHeader>
     )
 }
-
-// background-image: url(${bg});
-// background-repeat: no-repeat;
-// background-size: contain;
