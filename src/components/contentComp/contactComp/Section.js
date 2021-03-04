@@ -3,15 +3,6 @@ import styled from 'styled-components';
 
 import $ from 'jquery';
 
-const StyledArticleWrap = styled.article`
-    padding: 30px 25% 120px 25%;
-    text-align: center;
-`;
-
-const StyledForm = styled.form`
-
-`;
-
 const StyledInputWrap = styled.div`
     text-align: left;
     padding: 0 0 30px 0;
@@ -77,32 +68,34 @@ export default function Section() {
         }
     }
     return (
-        <StyledArticleWrap className="contact">
-            <StyledForm>
-                <StyledInputWrap>
-                    <StyledLabel>NAME</StyledLabel>
-                    <StyledInput calssName="input" onChange={handleChange} spellCheck="false" placeholder="이름" />
-                </StyledInputWrap>
-                <StyledInputWrap>
-                    <StyledLabel>E-MAIL</StyledLabel>
-                    <StyledInput className="input" onChange={handleChange} spellCheck="false" placeholder="이메일" />
-                </StyledInputWrap>
-                <StyledInputWrap>
-                    <StyledLabel>PHONE</StyledLabel>
-                    <StyledInput className="input" onChange={handleChange} spellCheck="false" placeholder="전화" />
-                </StyledInputWrap>
-                <StyledInputWrap>
-                    <StyledLabel>TITLE</StyledLabel>
-                    <StyledInput className="input" onChange={handleChange} spellCheck="false" placeholder="제목" />
-                </StyledInputWrap>
-                <StyledInputWrap>
-                    <StyledLabel>DETAILS</StyledLabel>
-                    <StyledTextarea className="input" onChange={handleChange} spellCheck="false" placeholder="문의 내용" />
-                </StyledInputWrap>
-                <StyledSubmitBtnDiv>
-                    <StyledSubmitBtn type="submit" value="전송" />
-                </StyledSubmitBtnDiv>
-            </StyledForm>
-        </StyledArticleWrap>
+        <section className="contSection">
+            <article className="articleGray">
+                <form>
+                    <StyledInputWrap>
+                        <StyledLabel>NAME</StyledLabel>
+                        <StyledInput name="name" onChange={handleChange} spellCheck="false" placeholder="이름" />
+                    </StyledInputWrap>
+                    <StyledInputWrap>
+                        <StyledLabel>E-MAIL</StyledLabel>
+                        <StyledInput name="email" onChange={handleChange} spellCheck="false" placeholder="이메일" />
+                    </StyledInputWrap>
+                    <StyledInputWrap>
+                        <StyledLabel>PHONE</StyledLabel>
+                        <StyledInput name="phone" onChange={handleChange} spellCheck="false" placeholder="전화" />
+                    </StyledInputWrap>
+                    <StyledInputWrap>
+                        <StyledLabel>TITLE</StyledLabel>
+                        <StyledInput name="title" onChange={handleChange} spellCheck="false" placeholder="제목" />
+                    </StyledInputWrap>
+                    <StyledInputWrap>
+                        <StyledLabel>DETAILS</StyledLabel>
+                        <StyledTextarea name="details" onChange={handleChange} spellCheck="false" placeholder="문의 내용" />
+                    </StyledInputWrap>
+                    <StyledSubmitBtnDiv>
+                        <StyledSubmitBtn name="submit" type="submit" value="전송" />
+                    </StyledSubmitBtnDiv>
+                </form>
+            </article>
+        </section>
     )
 }

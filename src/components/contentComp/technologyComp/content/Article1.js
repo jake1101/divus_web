@@ -7,11 +7,6 @@ import pytorch from '../../../../image/technologyImgs/article/pytorch.png';
 import caffe2 from '../../../../image/technologyImgs/article/caffe2.png';
 import theano from '../../../../image/technologyImgs/article/theano.png';
 
-const StyledArticleWrap = styled.article`
-    padding: 30px 20% 30px 20%;
-    
-`;
-
 const StyledArticleContent = styled.div`
     padding: 30px;
 `;
@@ -83,13 +78,13 @@ const StyledAppImg = styled.img`
 
 export default function Article1() {
     return (
-        <StyledArticleWrap className="article1">
+        <article className="articleGray">
             <StyledArticleContent>
                 <StyledTitle>AI Architecture</StyledTitle>
                 <StyledAppOs>OS: Linux</StyledAppOs>
                 <StyledAppWrap>
                     <StyledAppTitle>Machine Learning Applications</StyledAppTitle>
-                    <StyledAppContent className="appContent1">
+                    <StyledAppContent className="techContent1">
                         <StyledAppDiv>
                             <StyledTxt>
                                 Recognition of Damages
@@ -119,7 +114,7 @@ export default function Article1() {
                 </StyledAppWrap>
                 <StyledAppWrap>
                     <StyledAppTitle>Computer Vision Technology</StyledAppTitle>
-                    <StyledAppContent className="appContent2">
+                    <StyledAppContent className="techContent2">
                         <StyledSmAppDiv>
                             <StyledTxt>Image</StyledTxt>
                         </StyledSmAppDiv>
@@ -156,6 +151,6 @@ export default function Article1() {
                     </StyledAppContent>
                 </StyledAppWrap>
             </StyledArticleContent>
-        </StyledArticleWrap>
+        </article>
     )
 }

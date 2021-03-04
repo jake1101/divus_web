@@ -1,10 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-const StyledDemoLoginWrap = styled.div`
-  padding: 60px 0 0 0;
-`;
-
 const StyledDemoLoginDiv = styled.div`
   margin: 0 auto;
   width: 550px;
@@ -50,27 +46,25 @@ const StyledInputButton = styled.input`
 
 export default function DemoLogin() {
   return (
-    <StyledDemoLoginWrap>
-      <StyledDemoLoginDiv className="loginDiv">
-        <StyledH1>DemoLogin</StyledH1>
-        <form method={"POST"} action={"/login"}>
-          <StyledAllInputDivWrap>
-            <StyledInputDivWrap>
-              <StyledInputDiv style={{ margin: "0 0 5px 0" }}>
-                <label>아이디</label>
-                <StyledInput type="text" name="id" />
-              </StyledInputDiv>
-              <StyledInputDiv>
-                <label>비밀번호</label>
-                <StyledInput type="password" name="password" />
-              </StyledInputDiv>
-            </StyledInputDivWrap>
-            <StyledInputButtonDiv>
-              <StyledInputButton type="submit" value="로그인" />
-            </StyledInputButtonDiv>
-          </StyledAllInputDivWrap>
-        </form>
-      </StyledDemoLoginDiv>
-    </StyledDemoLoginWrap>
+    <StyledDemoLoginDiv className="loginDiv">
+      <StyledH1>DemoLogin</StyledH1>
+      <form method={"POST"} action={"/login"}>
+        <StyledAllInputDivWrap>
+          <StyledInputDivWrap>
+            <StyledInputDiv style={{ margin: "0 0 5px 0" }}>
+              <label>아이디</label>
+              <StyledInput type="text" name="id" />
+            </StyledInputDiv>
+            <StyledInputDiv>
+              <label>비밀번호</label>
+              <StyledInput type="password" name="password" />
+            </StyledInputDiv>
+          </StyledInputDivWrap>
+          <StyledInputButtonDiv>
+            <StyledInputButton type="submit" value="로그인" />
+          </StyledInputButtonDiv>
+        </StyledAllInputDivWrap>
+      </form>
+    </StyledDemoLoginDiv>
   )
 }

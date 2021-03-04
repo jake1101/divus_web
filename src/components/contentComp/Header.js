@@ -25,7 +25,7 @@ export default function Header(props) {
     return (
         <header className="headerDiv">
             <StyledPubHeader className={"header"}>
-                <Menu opa={1} />
+                <Menu topPos={0} showLogo={"block"} />
             </StyledPubHeader>
             <StyledTopArticle>
                 <StyledTitleH1 className="contentTitle">{props.f}<br />{props.l}</StyledTitleH1>

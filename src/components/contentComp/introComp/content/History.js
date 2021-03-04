@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 import graphImg from '../../../../image/introImg/graphImg.png';
-import carImg from '../../../../image/introImg/carImg.png';
-
-const StyledArticle1 = styled.article`
-padding: 60px 20% 0 20%;
-`;
+import carImg from '../../../../image/introImg/carImgCut.png';
 
 const StyledHistoryTitle = styled.h2`
   font-size: 40px;
@@ -14,13 +10,15 @@ const StyledHistoryTitle = styled.h2`
 
 const StyledHistoryDiv = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 40px 0 40px 0;
+  justify-content: center;
+  padding: 40px 0 0 0;
+  margin: 0 auto;
 `;
 
 const StyledUlDiv = styled.div`
   text-align: right;
   width: 600px;
+  padding: 0 50px;
 `;
 
 const StyledYear = styled.div`
@@ -37,7 +35,7 @@ const StyledLi = styled.li`
 
 export default function History() {
   return (
-    <StyledArticle1>
+    <article className="articleGray">
       <StyledHistoryTitle>회사 연혁</StyledHistoryTitle>
       <StyledHistoryDiv>
         <img className="introClass" src={graphImg} width={350} />
@@ -96,6 +94,6 @@ export default function History() {
         </StyledUlDiv>
         <img className="introClass" src={carImg} width={400} />
       </StyledHistoryDiv>
-    </StyledArticle1>
+    </article>
   )
 }

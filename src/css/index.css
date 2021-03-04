@@ -9,14 +9,6 @@ a {
     text-decoration: none;
 }
 
-a:hover{
-    color: #dcdbe1;
-}
-
-h3:hover{
-    color: #dcdbe1;
-}
-
 div, span, p, a, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
@@ -33,59 +25,8 @@ ul {
     position: relative;
 }
 
-#menu {
-    width: 100%;
-    position: absolute;
-    z-index: 301;
-}
-
 .header {
     background-color: #666;
-}
-
-.footer {
-    position: absolute;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    color: #ded2cf;
-    background: #46413b;
-}
-
-.l_footer {
-    float: left;
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    line-height: 100%;
-    margin-left: 20px;
-}
-
-.l_footer > .links {
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 100px;
-    line-height: 30px;
-}
-
-.r_footer {
-    float: right;
-    padding: 0;
-    margin: 0;
-    height: 125px;
-    padding-top: 25px;
-    margin-right: 30px;
-}
-
-.b_footer {
-    clear: both;
-    display: flex;
-    justify-content: center;
-    height: 120px;
-    line-height: 100px;
 }
 
 .content {
@@ -94,177 +35,25 @@ ul {
     color: #fff;
 }
 
-#logo {
-    width: 220px;
+.linkClass:hover{
+    color: #ded2cf;
+    margin-bottom: -3px;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
 }
 
-.m_selected h3 {
+.imgLink:hover {
+    border: none;
+    margin-bottom: 0;
+}
+
+.m_selected h2 {
     margin-bottom: -3px;
     border-bottom: 3px solid white;
 }
 
-.f_selected h3 {
-    margin-bottom: -3px;
-    border-bottom: 3px solid white;
-}
-
-@media (max-width: 1000px) {
-    .headerDiv {
-        height: 137px !important;
-        width: 100%;
-        display: inline-block;
-    }
-    .header {
-        height: 0 !important;
-        padding: 0 !important;
-    }
-
-    .header img {
-        box-shadow: none;
-    }
-
-    .greetTxt {
-        display: none;
-    }
-    #menuLogo {
-        opacity: 1;
-        padding: 0;
-    }
-
-    .article1 {
-        padding: 30px 0 30px 0 !important;
-    }
-
-    .article2 {
-        padding: 30px !important;
-    }
-
-    .article3 {
-        padding: 30px !important;
-    }
-
-    .footer {
-        height: 500px !important;
-        text-align: center;
-    }
-
-    .l_footer {
-        float: none;
-        margin: 0;
-        display: inline-block !important;
-    }
-
-    .l_footer p {
-        width: 90%;
-    }
-
-    .l_footer > .links {
-        display: flex !important;
-        width: 100%;
-    }
-
-    .r_footer {
-        float: none;
-        padding: 50px 0 0 0 !important;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .b_footer {
-        float: none !important;
-        display: block;
-        padding: 0 !important;
-    }
-
-    #setSclBtn {
-        left: 85%;
-        z-index: 300;
-    }
-
-    .pageLinkComp {
-        display: none !important;
-    }
-
-    .productsArticle img {
-        width: 100%;
-    }
-
-    .productsArticle iframe {
-        width: 100%;
-    }
-
-    .technologySection .appContent1 {
-        display: inline-block;
-        justify-content: unset;
-    }
-
-    .technologySection .appContent1 > div {
-        margin: 30px 20px;
-    }
-
-    .technologySection .appContent2 {
-        display: inline-block;
-        justify-content: unset;
-    }
-
-    .technologySection .appContent2 > div {
-        margin: 30px 20px;
-    }
-
-    .serviceH2 {
-        font-size: 30px !important;
-        padding: 0 0 60px 0;
-    }
-
-    .serviceBtn {
-        margin: 0 0 60px 0 !important;
-    }
-
-    .loginDiv {
-        width: 100% !important;
-    }
-
-    .introClass {
-        display: none !important;
-    }
-}
-
-@media (max-width: 1320px) {
-    #menuLogo {
-        opacity: 1;
-        padding: 0;
-    }
-
-    #menuLinks {
-        visibility: hidden;
-    }
-
-    #hiddenMenu{
-        visibility: visible;
-    }
-
-    .footer {
-        height: 450px;
-    }
-
-    .l_footer {
-        display: block;
-    }
-
-    .l_footer > .links{
-        display: inline;
-    }
-
-    .r_footer {
-        padding: 133px 0 0 0;
-    }
-
-    .b_footer {
-        float: right;
-        padding: 40px 80px 0 0;
-    }
-
-    .introClass {
-        display: none !important;
-    }
+#sclTopBtn:hover {
+    cursor: pointer !important;
+    color: rgba(220,219,225,1) !important;
+    border: 2px solid !important;
 }

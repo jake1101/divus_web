@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const StyledArticle2 = styled.article`
-  padding: 30px 20% 120px 20%;
-`;
-
 const StyledSummaryTitle = styled.h2`
   font-size: 40px;
   padding: 30px 0 20px 0;
@@ -33,7 +29,7 @@ const StyledSummaryTh = styled.th`
 
 export default function Summary() {
   return (
-    <StyledArticle2>
+    <article className="articleGray">
       <StyledSummaryTitle>개요</StyledSummaryTitle>
       <StyledSummarySub>컴퓨터 비전, OCR, 예측기술 분야의 AI 전문 기업으로 DoctorCar, Doctor Factory 솔루션 개발</StyledSummarySub>
       <StyledSummaryTable>
@@ -63,6 +59,6 @@ export default function Summary() {
           </StyledSummaryTr>
         </tbody>
       </StyledSummaryTable>
-    </StyledArticle2>
+    </article>
   )
 }

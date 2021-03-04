@@ -3,30 +3,32 @@ import styled from 'styled-components';
 
 import imgSrc from '../../../../image/productsImgs/article/u105.png'
 
-const StyledTopArticle = styled.div`
-`;
-
-const StyledArticleWrap = styled.div`
-    display: inline-block;
-`;
-
-const StyledTitleH1 = styled.h1`
-    text-align: left;
+const StyledTitleH1 = styled.h2`
+    padding: 10px 0 0 0;
 `;
 
 const StyleText = styled.p`
-    text-align: left;
-    padding: 0 0 10px 0;
+    padding: 0 0 30px 0;
+    font-size: 20px;
+`;
+
+const StyledImgDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
 `;
 
 export default function TopContent() {
     return (
-        <StyledTopArticle>
-            <StyledArticleWrap>
+        <article className="articleGray">
+            <div>
                 <StyledTitleH1>자동차 자동 검사 시스템</StyledTitleH1>
                 <StyleText>인공지능 기반의 컴퓨터 비전 기술을 이용한 자동차 자동 검사 시스템</StyleText>
-                <img src={imgSrc} alt="img" />
-            </StyledArticleWrap>
-        </StyledTopArticle>
+            </div>
+
+            <StyledImgDiv>
+                <img src={imgSrc} alt="img" width="893px" />
+            </StyledImgDiv>
+        </article>
     )
 }

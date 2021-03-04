@@ -34,7 +34,7 @@ export default function Header() {
             <StyledHeaderContent className="header">
                 <HeaderBg />
             </StyledHeaderContent>
-            <Menu opa={0} />
+            <Menu />
         </StyledHeader>
     )
 }

@@ -8,11 +8,6 @@ import slide4 from '../../../image/article/article_slide4.png'
 
 import Slider from "react-slick";
 
-const StyledSlideWrap = styled.div`
-    background-color: #46413b;
-    padding: 100px 25% 100px 25%;
-`;
-
 const slideImgStyle = {
   width: "100%"
 };
@@ -29,7 +24,7 @@ function SlideImg() {
     focusOnSelect: true
   };
   return (
-    <StyledSlideWrap className="article2">
+    <article className="articleGray">
       <Slider {...settings}>
         <div>
           <img style={slideImgStyle} className="slImg" src={slide1} alt="article" />
@@ -44,7 +39,7 @@ function SlideImg() {
           <img style={slideImgStyle} className="slImg" src={slide4} alt="article" />
         </div>
       </Slider>
-    </StyledSlideWrap>
+    </article>
   )
 }
 

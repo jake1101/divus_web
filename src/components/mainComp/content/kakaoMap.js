@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 const { daum } = window;
 
-const StyledMapWrap = styled.div`
-    padding: 100px 25% 100px 25%;
-`;
-
 const StyledMapDiv = styled.div`
     display: flex;
     justify-content: center;
@@ -26,11 +22,11 @@ function MapContent() {
   })
 
   return (
-    <StyledMapWrap className="article3">
+    <article className="articleGray">
       <StyledMapDiv>
         <div id="daumRoughmapContainer1612976515378" className="root_daum_roughmap root_daum_roughmap_landing"></div>
       </StyledMapDiv>
-    </StyledMapWrap>
+    </article>
   )
 }
 

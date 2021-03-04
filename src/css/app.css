@@ -1,0 +1,180 @@
+.contSection {
+  width: 100%;
+  text-align: center;
+}
+
+.articleBlack {
+  padding: 100px 25%;
+  background-color: #111;
+}
+
+.articleGray {
+    padding: 100px 25%;
+}
+
+.articleBrown {
+  padding: 100px 25%;
+  background-color: #46413b;
+}
+
+.articleFooter {
+    padding: 50px 25%;
+    background-color: #46413b;
+}
+
+.footer {
+    margin: 100px 0 0 0;
+}
+
+@media(max-width: 2000px) {
+    .footerL {
+        display: block !important;
+    }
+
+    .footerLink {
+        padding: 10px 0 0 20px !important;
+    }
+
+    .footerLink .linkClass {
+        margin: 0 40% 0 0;
+        padding: 10px 0 0 0;
+    }
+
+    .footerR {
+        padding: 45px 0 0 0;
+    }
+
+    .footerR h2, .footerR p {
+        width: 100%;
+        text-align: right;
+    }
+
+    .footerB {
+        padding: 50px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* @media (max-width: 1000px) {
+  .headerDiv {
+      height: 137px !important;
+      width: 100%;
+      display: inline-block;
+  }
+  .header {
+      height: 0 !important;
+      padding: 0 !important;
+  }
+
+  .header img {
+      box-shadow: none;
+  }
+
+  .greetTxt {
+      display: none;
+  }
+  #menuLogo {
+      opacity: 1;
+      padding: 0;
+  }
+
+  .article1 {
+      padding: 30px 0 30px 0 !important;
+  }
+
+  .article2 {
+      padding: 30px !important;
+  }
+
+  .article3 {
+      padding: 30px !important;
+  }
+
+  #setSclBtn {
+      left: 85%;
+      z-index: 300;
+  }
+
+  .productsArticle img {
+      width: 100%;
+  }
+
+  .productsArticle iframe {
+      width: 100%;
+  }
+
+  .contSection .techContent1 {
+      display: inline-block;
+      justify-content: unset;
+  }
+
+  .contSection .techContent1 > div {
+      margin: 30px 20px;
+  }
+
+  .contSection .techContent2 {
+      display: inline-block;
+      justify-content: unset;
+  }
+
+  .contSection .techContent2 > div {
+      margin: 30px 20px;
+  }
+
+  .serviceH2 {
+      font-size: 30px !important;
+      padding: 0 0 60px 0;
+  }
+
+  .serviceBtn {
+      margin: 0 0 60px 0 !important;
+  }
+
+  .loginDiv {
+      width: 100% !important;
+  }
+
+  .introClass {
+      display: none !important;
+  }
+}
+
+@media (max-width: 1320px) {
+
+.contSection .techContent1 {
+    display: inline-block;
+    justify-content: unset;
+}
+
+.contSection .techContent1 > div {
+    margin: 30px 20px;
+}
+
+.contSection .techContent2 {
+    display: inline-block;
+    justify-content: unset;
+}
+
+.contSection .techContent2 > div {
+    margin: 30px 20px;
+}
+
+  #menuLogo {
+      opacity: 1;
+      padding: 0;
+  }
+
+  #menuLinks {
+      visibility: hidden;
+  }
+
+  #hiddenMenu{
+      visibility: visible;
+  }
+
+  .introClass {
+      display: none !important;
+  } 
+}*/

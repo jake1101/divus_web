@@ -1,37 +1,29 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const StyledProductsContent = styled.div`
-    padding: 30px 0 30px 0;
-`;
-
-const StyledContentWrap = styled.div`
-`;
-
-const StyledTitleH1 = styled.h1`
-    padding: 30px 0 10px 0;
+const StyledTitleH1 = styled.h2`
+    padding: 0 0 30px 0;
 `;
 
 const StyledTextDiv = styled.div`
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0 30px 0;
 `;
 
 const StyledText = styled.p`
-    width: 50%;
+    width: 80%;
+    font-size: 18px;
 `;
 
 export default function ProductsContent(props) {
     return (
-        <StyledProductsContent className={props.className} id={props.id}>
-            <StyledContentWrap>
-                <StyledTitleH1>{props.title}</StyledTitleH1>
-                <div>{props.utub}</div>
-                <StyledTextDiv>
-                    <StyledText>{props.text}</StyledText>
-                </StyledTextDiv>
-            </StyledContentWrap>
-        </StyledProductsContent>
+        <article className={props.className} id={props.id}>
+            <StyledTitleH1>{props.title}</StyledTitleH1>
+            <div>{props.utub}</div>
+            <StyledTextDiv>
+                <StyledText>{props.text}</StyledText>
+            </StyledTextDiv>
+        </article>
     )
 }

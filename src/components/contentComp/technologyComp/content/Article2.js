@@ -6,11 +6,6 @@ import car2 from '../../../../image/technologyImgs/article/car2.png';
 import car3 from '../../../../image/technologyImgs/article/car3.png';
 import car4 from '../../../../image/technologyImgs/article/car4.png';
 
-const StyledArticleWrap = styled.article`
-    padding: 30px 20% 30px 20%;
-
-`;
-
 const StyledArticleContent = styled.div`
     border: 1px solid white;
     padding: 30px;
@@ -40,7 +35,7 @@ const StyledContentImg = styled.img`
 
 export default function Article2() {
     return (
-        <StyledArticleWrap className="article2">
+        <article className="articleGray">
             <StyledTitle>자동차 자동검사솔루션 “Doctor Car”</StyledTitle>
             <StyledArticleContent>
                 <StyledContent>
@@ -68,6 +63,6 @@ export default function Article2() {
                     </StyledContentDiv>
                 </StyledContent>
             </StyledArticleContent>
-        </StyledArticleWrap>
+        </article>
     )
 }
