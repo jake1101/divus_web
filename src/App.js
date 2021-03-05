@@ -20,19 +20,13 @@ const SetScrollTop = function () {
   }
 
   useEffect(() => {
-    const linkClass = document.getElementsByClassName("linkClass");
-    for (var i = 0; i < linkClass.length; i++) {
-      linkClass[i].addEventListener("click", () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-      })
-    }
     window.addEventListener("scroll", () => {
       const offsetHeight = window.document.body.offsetHeight;
       var st = window.scrollY;
 
       setShow((showState) => st > (offsetHeight * 0.2) ? showState = "block" : showState = "none");
     })
-  }, [show])
+  }, [show, pos])
 
   const btnStyle = {
     display: show,

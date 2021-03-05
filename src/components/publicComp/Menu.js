@@ -65,7 +65,7 @@ const linkStyle = {
 
 const MenuLink = function (props) {
   return (
-    <NavLink style={linkStyle} activeClassName={"m_selected"} to={props.src}>
+    <NavLink style={linkStyle} activeClassName={"m_selected"} to={props.src} onClick={props.clickEvent}>
       <h2 className="linkClass">{props.title}</h2>
     </NavLink>
   )
@@ -73,10 +73,15 @@ const MenuLink = function (props) {
 
 const Menu = ({ topPos, showLogo }) => {
   const [vsb, setVsb] = useState("hidden");
-  const [pos, setPos] = useState("absolute");
   const [top, setTop] = useState(0);
+  const [pos] = useState({ top: 0, left: 0, behavior: 'smooth' });
+
   const showHiddenBtn = () => {
     setVsb(vsbState => vsbState === "hidden" ? vsbState = "visible" : vsbState = "hidden");
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo(pos);
   }
 
   useEffect(() => {
@@ -125,23 +130,23 @@ const Menu = ({ topPos, showLogo }) => {
     <StyledMenuBar top={top} id="menu">
       <StyledMenuLinks>
         <StyledLogoDiv showLogo={showLogo}>
-          <Link to="/"><StyledLogo className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
+          <Link to="/" onClick={scrollToTop}><StyledLogo className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
         </StyledLogoDiv>
-        <MenuLink src={"/products"} title={"PRODUCTS"} />
-        <MenuLink src={"/technology"} title={"TECHNOLOGY"} />
-        <MenuLink src={"/contact"} title={"CONTACT"} />
-        <MenuLink src={"/service"} title={"SERVICE"} />
+        <MenuLink src={"/products"} title={"PRODUCTS"} clickEvent={scrollToTop} />
+        <MenuLink src={"/technology"} title={"TECHNOLOGY"} clickEvent={scrollToTop} />
+        <MenuLink src={"/contact"} title={"CONTACT"} clickEvent={scrollToTop} />
+        <MenuLink src={"/service"} title={"SERVICE"} clickEvent={scrollToTop} />
       </StyledMenuLinks>
       <StyledHiddenMenu id="hiddenMenu">
         <div>
-          <Link to="/"><StyledLogo className="linkClass imgLink" src={logo} alt="logo" /></Link>
+          <Link to="/" onClick={scrollToTop} ><StyledLogo className="linkClass imgLink" src={logo} alt="logo" /></Link>
         </div>
         <StyledHiddenMenuBtn className="linkClass" onClick={showHiddenBtn}>MENU</StyledHiddenMenuBtn>
         <StyledHiddenMenuLinks vsb={vsb}>
-          <MenuLink src={"/products"} title={"PRODUCTS"} />
-          <MenuLink src={"/technology"} title={"TECHNOLOGY"} />
-          <MenuLink src={"/contact"} title={"CONTACT"} />
-          <MenuLink src={"/service"} title={"SERVICE"} />
+          <MenuLink src={"/products"} title={"PRODUCTS"} clickEvent={scrollToTop} />
+          <MenuLink src={"/technology"} title={"TECHNOLOGY"} clickEvent={scrollToTop} />
+          <MenuLink src={"/contact"} title={"CONTACT"} clickEvent={scrollToTop} />
+          <MenuLink src={"/service"} title={"SERVICE"} clickEvent={scrollToTop} />
         </StyledHiddenMenuLinks>
       </StyledHiddenMenu>
     </StyledMenuBar>

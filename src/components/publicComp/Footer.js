@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import logo from '../../image/logo/logo_w_colored.png';
@@ -28,6 +28,9 @@ const linkStyle = {
 };
 
 export default function Footer() {
+  const [pos] = useState({ top: 0, left: 0, behavior: 'smooth' });
+  const scrollToTop = () => { window.scrollTo(pos); }
+  const onClickMapLink = () => { localStorage.setItem("onScrollMap", "true"); }
   return (
     <div className="footer">
       <article className="articleFooter">
@@ -37,9 +40,9 @@ export default function Footer() {
               <Link to="/"><img className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
             </div>
             <StyledLeftLinkDiv className="footerLink">
-              <Link to="/intro" style={linkStyle}><StyledH2 className="linkClass">회사 소개</StyledH2></Link>
-              <Link to="/" style={linkStyle}><StyledH2 className="linkClass">위치</StyledH2></Link>
-              <Link to="/contact" style={linkStyle}><StyledH2 className="linkClass">문의</StyledH2></Link>
+              <Link to="/intro" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">회사 소개</StyledH2></Link>
+              <Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}><StyledH2 className="linkClass">위치</StyledH2></Link>
+              <Link to="/contact" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">문의</StyledH2></Link>
             </StyledLeftLinkDiv>
           </StyledFlexDiv>
           <div className="footerR">

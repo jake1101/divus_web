@@ -9,7 +9,7 @@ const StyledGreeting = styled.div`
     font-size: 100px;
     text-align: center;
     font-weight: 100;
-    margin: 260px 0 260px 0;
+    margin: 260px 0 50px 0;
 `;
 
 export default function Section() {
