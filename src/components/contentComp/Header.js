@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 import Menu from '../publicComp/Menu';
 
-const StyledPubHeader = styled.div`
+const StyledHeader = styled.header`
+    margin: 0 0 30px 0;
+    padding: 0;
+    position: relative;
+`;
+
+const StyledPubMenuBar = styled.div`
     position: relative;
     text-align: center;
     padding: 0;
@@ -12,24 +18,30 @@ const StyledPubHeader = styled.div`
 
 const StyledTopArticle = styled.article`
     position: relative;
-    height: 600px;
+    border-bottom: 1px solid black;
+    display: table;
+    width: 100%;
 `;
 
 const StyledTitleH1 = styled.h1`
     text-align: center;
     font-size: 30px;
-    padding: 300px 0 0 0;
+    height: 400px;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
 `;
 
 export default function Header(props) {
     return (
-        <header className="headerDiv">
-            <StyledPubHeader className={"header"}>
+        <StyledHeader>
+            <StyledPubMenuBar>
                 <Menu topPos={0} showLogo={"block"} />
-            </StyledPubHeader>
+            </StyledPubMenuBar>
             <StyledTopArticle>
                 <StyledTitleH1 className="contentTitle">{props.f}<br />{props.l}</StyledTitleH1>
             </StyledTopArticle>
-        </header>
+        </StyledHeader>
     )
 }

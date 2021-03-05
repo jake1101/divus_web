@@ -7,11 +7,13 @@ import FactorySection from './FactorySection';
 import Footer from '../../publicComp/Footer';
 
 const StyledWrap = styled.div`
-    padding: 30px 20%;
+    position: absolute;
+    width: 100%;
+    top: 380px;
 `;
 
 const StyledDiv = styled.div`
-    width: 100%;
+    padding: 0 32%;
     display: flex;
     justify-content: space-between;
 `;
@@ -21,7 +23,6 @@ const StyledLinkDiv = styled.div`
 `;
 
 const StyledTitleH3 = styled.h3`
-    position: relative;
     display: inline-block;
     &:hover {
         color: #dcdbe1;
@@ -36,6 +37,8 @@ const StyledLinks = styled.div`
     position: absolute;
     display: flex;
     width: 520px;
+    top: 32px;
+    left: -170px;
 `;
 
 const StyledLink = styled.p`

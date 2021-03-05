@@ -9,7 +9,9 @@
 }
 
 .articleGray {
-    padding: 100px 25%;
+    margin: 0 25% 15px 25%;
+    padding: 30px;
+    border: 1px solid black;
 }
 
 .articleBrown {
@@ -23,7 +25,7 @@
 }
 
 .footer {
-    margin: 100px 0 0 0;
+    margin: 0;
 }
 
 @media(max-width: 2000px) {

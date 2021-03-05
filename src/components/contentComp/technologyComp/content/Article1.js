@@ -12,12 +12,12 @@ const StyledArticleContent = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-    border-top: 1px solid white;
+    border-top: 3px solid #666;
     padding-top: 20px;
 `;
 
 const StyledAppWrap = styled.div`
-    border-bottom: 1px solid white;
+    border-bottom: 3px solid #666;
     padding: 30px;
     margin: 10px;
 `;
@@ -38,7 +38,7 @@ const StyledAppContent = styled.div`
 const StyledAppDiv = styled.div`
     width: 130px;
     height: 130px;
-    border: 1px solid white;
+    border: 1px solid #666;
     border-radius: 10px;
     margin: 0 auto;
     display: table;
@@ -47,7 +47,7 @@ const StyledAppDiv = styled.div`
 const StyledSmAppDiv = styled.div`
     width: 110px;
     height: 110px;
-    border: 1px solid white;
+    border: 1px solid #666;
     border-radius: 10px;
     margin: 0 auto;
     display: table;

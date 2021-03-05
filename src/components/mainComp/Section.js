@@ -14,8 +14,7 @@ const StyledGreeting = styled.div`
 
 export default function Section() {
     return (
-        <section className="contSection">
-            <StyledGreeting className="greetTxt"><h1>WELCOME TO DIVUS</h1></StyledGreeting>
+        <section className="contSection" style={{ margin: "105px 0 0 0" }}>
 
             <ArticleImg />
 
