@@ -12,12 +12,12 @@ const StyledArticleContent = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-    border-top: 3px solid #666;
+    border-top: 3px solid white;
     padding-top: 20px;
 `;
 
 const StyledAppWrap = styled.div`
-    border-bottom: 3px solid #666;
+    border-bottom: 3px solid white;
     padding: 30px;
     margin: 10px;
 `;
@@ -78,7 +78,7 @@ const StyledAppImg = styled.img`
 
 export default function Article1() {
     return (
-        <article className="articleGray">
+        <article className="articleDarkBlueGray">
             <StyledArticleContent>
                 <StyledTitle>AI Architecture</StyledTitle>
                 <StyledAppOs>OS: Linux</StyledAppOs>

@@ -1,34 +1,38 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import DemoLogin from './DemoLogin';
 
 const Section = () => {
-  const StyledTextH2 = styled.h2`
-    font-size: 30px;
-    padding: 0 0 160px 0;
-`;
+  const StyledArticle = styled.h2`
+    margin: 150px 0;
+  `;
 
   const StyledLinkBtn = styled.h2`
-    padding: 60px 0 0 0;
-    color: #fff;
-    display: inline-block;
-    &:hover {
-        color: #dcdbe1;
-        margin-bottom: -3px;
-        border-bottom: 3px solid #fff;
-    }
-`;
+    font-size: 30px;
+    color: white;
+  `;
+
+  const linkBox = {
+    border: "1px solid black",
+    background: "#495054",
+    borderRadius: "5px",
+    margin: "60px 0 0 0",
+    padding: "10px",
+    display: "inline-block"
+  }
   return (
     <section className="contSection">
-      <article className="articleGray">
-        <DemoLogin />
-        <NavLink to={"/contact"} activeClassName={"f_selected"}>
-          <StyledLinkBtn className="serviceBtn">
-            문의하기
-          </StyledLinkBtn>
-        </NavLink>
+      <article className="articleLightBlueGray">
+        <StyledArticle>
+          <DemoLogin />
+          <Link to={"/contact"} style={linkBox}>
+            <StyledLinkBtn className={"linkClass"}>
+              문의하기
+            </StyledLinkBtn>
+          </Link>
+        </StyledArticle>
       </article>
     </section>
   )

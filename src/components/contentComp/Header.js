@@ -35,7 +35,7 @@ const StyledTitleH1 = styled.h1`
 
 export default function Header(props) {
     return (
-        <StyledHeader>
+        <StyledHeader className="header headerDiv">
             <StyledPubMenuBar>
                 <Menu topPos={0} showLogo={"block"} />
             </StyledPubMenuBar>

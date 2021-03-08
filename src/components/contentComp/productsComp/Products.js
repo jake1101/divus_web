@@ -24,8 +24,9 @@ const StyledLinkDiv = styled.div`
 
 const StyledTitleH3 = styled.h3`
     display: inline-block;
+    color: white;
     &:hover {
-        color: #dcdbe1;
+        color: #ded2cf;
         cursor: pointer;
         border-bottom: 1px solid;
         margin-bottom: -1px;

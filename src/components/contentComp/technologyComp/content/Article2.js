@@ -35,7 +35,7 @@ const StyledContentImg = styled.img`
 
 export default function Article2() {
     return (
-        <article className="articleGray">
+        <article className="articleBrown">
             <StyledTitle>자동차 자동검사솔루션 “Doctor Car”</StyledTitle>
             <StyledArticleContent>
                 <StyledContent>

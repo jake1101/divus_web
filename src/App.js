@@ -38,7 +38,7 @@ const SetScrollTop = function () {
     position: "fixed",
     bottom: "40px",
     left: "90%",
-    color: "rgba(190, 186, 181, 0.7)",
+    color: "rgba(107, 144, 179, 0.7)",
     outline: 0,
   }
 

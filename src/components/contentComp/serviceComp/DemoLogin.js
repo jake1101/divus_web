@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const StyledDemoLoginDiv = styled.div`
   margin: 0 auto;
   width: 550px;
-  border: 1px solid white;
+  color: white;
+  border: 1px solid black;
   padding: 10px 0 90px 0;
 `;
 
@@ -32,6 +33,7 @@ const StyledInput = styled.input`
   margin: 0 0 0 10px;
   border: none;
   border-radius: 5px;
+  outline: none;
 `;
 
 const StyledInputButtonDiv = styled.div`
@@ -46,7 +48,7 @@ const StyledInputButton = styled.input`
 
 export default function DemoLogin() {
   return (
-    <StyledDemoLoginDiv className="loginDiv">
+    <StyledDemoLoginDiv className="loginDiv articleDarkBlueGray">
       <StyledH1>DemoLogin</StyledH1>
       <form method={"POST"} action={"/login"}>
         <StyledAllInputDivWrap>

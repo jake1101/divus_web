@@ -16,7 +16,7 @@ const StyledImgDiv = styled.div`
 
 const FactoryArt1 = () => {
   return (
-    <article className="articleGray">
+    <article className="articleDarkBlueGray">
       <h2>제조공정의 예측, 예지, 품질 검사 솔루션</h2>
       <StyledP>
         접근성, 확장성 크로스 브라우저 플랫폼 웹기반 서비스.<br />

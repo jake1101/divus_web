@@ -61,9 +61,9 @@ export default function Footer() {
           </StyledLogoDiv>
           <div>
             <StyledLinkDiv className="footerLink">
-              <StyledH2 className="linkClass"><Link to="/intro" style={linkStyle} onClick={scrollToTop}>회사 소개</Link></StyledH2>
-              <StyledH2 className="linkClass"><Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}>위치</Link></StyledH2>
-              <StyledH2 className="linkClass"><Link to="/contact" style={linkStyle} onClick={scrollToTop}>문의</Link></StyledH2>
+              <Link to="/intro" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">회사 소개</StyledH2></Link>
+              <Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}><StyledH2 className="linkClass">위치</StyledH2></Link>
+              <Link to="/contact" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">문의</StyledH2></Link>
             </StyledLinkDiv>
             <StyledAddressDiv>
               <p>경기도 하남시 검단산로 239 하남시 벤처센터 405호</p>

@@ -5,13 +5,6 @@ import ArticleImg from './content/ArticleImg';
 import SlideImg from './content/SlideImg';
 import MapContent from './content/kakaoMap';
 
-const StyledGreeting = styled.div`
-    font-size: 100px;
-    text-align: center;
-    font-weight: 100;
-    margin: 260px 0 50px 0;
-`;
-
 export default function Section() {
     return (
         <section className="contSection" style={{ margin: "105px 0 0 0" }}>

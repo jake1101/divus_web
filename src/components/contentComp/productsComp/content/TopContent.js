@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import imgSrc from '../../../../image/productsImgs/article/u105.png'
 
+const StyledTxtDiv = styled.div`
+    color: white;
+`;
+
 const StyledTitleH1 = styled.h2`
     padding: 10px 0 0 0;
 `;
@@ -20,11 +24,11 @@ const StyledImgDiv = styled.div`
 
 export default function TopContent() {
     return (
-        <article className="articleGray">
-            <div>
+        <article className="articleDarkBlueGray">
+            <StyledTxtDiv>
                 <StyledTitleH1>자동차 자동 검사 시스템</StyledTitleH1>
                 <StyleText>인공지능 기반의 컴퓨터 비전 기술을 이용한 자동차 자동 검사 시스템</StyleText>
-            </div>
+            </StyledTxtDiv>
 
             <StyledImgDiv>
                 <img src={imgSrc} alt="img" width="893px" />

@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 
+const StyledArticle = styled.article`
+    color: white;
+`;
+
 const StyledTitleH1 = styled.h2`
     padding: 0 0 30px 0;
 `;
@@ -18,12 +22,12 @@ const StyledText = styled.p`
 
 export default function ProductsContent(props) {
     return (
-        <article className={props.className} id={props.id}>
+        <StyledArticle className={props.className} id={props.id}>
             <StyledTitleH1>{props.title}</StyledTitleH1>
             <div>{props.utub}</div>
             <StyledTextDiv>
                 <StyledText>{props.text}</StyledText>
             </StyledTextDiv>
-        </article>
+        </StyledArticle>
     )
 }
