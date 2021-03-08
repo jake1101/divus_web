@@ -7,7 +7,7 @@ const StyledH2 = styled.h2`
 
 const FactoryArt3 = () => {
   return (
-    <article className="articleGray">
+    <article className="articleGray articleClass">
       <StyledH2>DOCTOR FACTORY AI</StyledH2>
       <iframe width="893" height="487" src="https://www.youtube.com/embed/WHIY8hsISZE" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </article>

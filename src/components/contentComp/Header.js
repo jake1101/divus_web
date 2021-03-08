@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Menu from '../publicComp/Menu';
 
 const StyledHeader = styled.header`
-    margin: 0 0 30px 0;
     padding: 0;
     position: relative;
 `;

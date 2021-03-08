@@ -81,8 +81,8 @@ export default function Section() {
     }
     return (
         <section className="contSection">
-            <article className="articleLightBlueGray">
-                <div className="articleDarkBlueGray">
+            <article className="articleLightBlueGray articleClass contactArticle">
+                <div className="articleDarkBlueGray articleClass">
                     <form onSubmit={sendEmail}>
                         <StyledInputWrap>
                             <StyledLabel>NAME</StyledLabel>

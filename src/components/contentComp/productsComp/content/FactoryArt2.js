@@ -15,7 +15,7 @@ const StyledImgDiv = styled.div`
 
 const FactoryArt2 = () => {
   return (
-    <article className="articleBrown">
+    <article className="articleBrown articleClass">
       <StyledH2>원재료 입고 부터 출고, 및 분석 단계 까지 모바일 앱으로 생산 관리 전과정 관리</StyledH2>
       <StyledImgDiv>
         <img src={image} width={"832px"} />

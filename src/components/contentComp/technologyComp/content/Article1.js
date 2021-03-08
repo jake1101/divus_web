@@ -54,14 +54,12 @@ const StyledSmAppDiv = styled.div`
 `;
 
 const StyledImgWrap = styled.div`
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: table;
 `;
 
 
-const StyledTxt = styled.p`
+const StyledTxt = styled.div`
     display: table-cell;
     vertical-align: middle;
 `;
@@ -77,80 +75,118 @@ const StyledAppImg = styled.img`
 `;
 
 export default function Article1() {
-    return (
-        <article className="articleDarkBlueGray">
-            <StyledArticleContent>
-                <StyledTitle>AI Architecture</StyledTitle>
-                <StyledAppOs>OS: Linux</StyledAppOs>
-                <StyledAppWrap>
-                    <StyledAppTitle>Machine Learning Applications</StyledAppTitle>
-                    <StyledAppContent className="techContent1">
-                        <StyledAppDiv>
-                            <StyledTxt>
-                                Recognition of Damages
-                            </StyledTxt>
-                        </StyledAppDiv>
-                        <StyledAppDiv>
-                            <StyledTxt>
-                                Classification of Brand&Model
-                            </StyledTxt>
-                        </StyledAppDiv>
-                        <StyledAppDiv>
-                            <StyledTxt>
-                                Idenntification of Car&Car Parts
-                            </StyledTxt>
-                        </StyledAppDiv>
-                        <StyledAppDiv>
-                            <StyledTxt>
-                                Recognition of NP, VIN, Hand Write
-                            </StyledTxt>
-                        </StyledAppDiv>
-                        <StyledAppDiv>
-                            <StyledTxt>
-                                Prediction
-                            </StyledTxt>
-                        </StyledAppDiv>
-                    </StyledAppContent>
-                </StyledAppWrap>
-                <StyledAppWrap>
-                    <StyledAppTitle>Computer Vision Technology</StyledAppTitle>
-                    <StyledAppContent className="techContent2">
-                        <StyledSmAppDiv>
-                            <StyledTxt>Image</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>Classification</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>Object</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>Detection</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>Segmentation</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>OCR</StyledTxt>
-                        </StyledSmAppDiv>
-                        <StyledSmAppDiv>
-                            <StyledTxt>추론기술</StyledTxt>
-                        </StyledSmAppDiv>
-                    </StyledAppContent>
-                </StyledAppWrap>
-                <StyledAppWrap>
-                    <StyledAppTitle>Machine Learning Framework</StyledAppTitle>
-                    <StyledAppContent>
-                        <StyledImgWrap>
-                            <StyledAppImgDiv><StyledAppImg src={tensorflow} alt="tensorflow" /></StyledAppImgDiv>
-                            <StyledAppImgDiv><StyledAppImg src={keras} alt="keras" /></StyledAppImgDiv>
-                            <StyledAppImgDiv><StyledAppImg src={pytorch} alt="pytorch" /></StyledAppImgDiv>
-                            <StyledAppImgDiv><StyledAppImg src={caffe2} alt="caffe2" /></StyledAppImgDiv>
-                            <StyledAppImgDiv><StyledAppImg src={theano} alt="theano" /></StyledAppImgDiv>
-                        </StyledImgWrap>
-                    </StyledAppContent>
-                </StyledAppWrap>
-            </StyledArticleContent>
-        </article>
-    )
+  return (
+    <article className="articleDarkBlueGray articleClass">
+      <StyledArticleContent>
+        <StyledTitle>AI Architecture</StyledTitle>
+        <StyledAppOs>OS: Linux</StyledAppOs>
+        <StyledAppWrap>
+          <StyledAppTitle>Machine Learning Applications</StyledAppTitle>
+          <StyledAppContent className="techContent1">
+            <StyledAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Recognition of Damages
+                </span>
+              </StyledTxt>
+            </StyledAppDiv>
+            <StyledAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Classification of Brand&Model
+                </span>
+              </StyledTxt>
+            </StyledAppDiv>
+            <StyledAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Idenntification of Car&Car Parts
+                </span>
+              </StyledTxt>
+            </StyledAppDiv>
+            <StyledAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Recognition of NP, VIN, Hand Write
+                </span>
+              </StyledTxt>
+            </StyledAppDiv>
+            <StyledAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Prediction
+                </span>
+              </StyledTxt>
+            </StyledAppDiv>
+          </StyledAppContent>
+        </StyledAppWrap>
+        <StyledAppWrap>
+          <StyledAppTitle>Computer Vision Technology</StyledAppTitle>
+          <StyledAppContent className="techContent2">
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Image
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Classification
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Object
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Detection
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  Segmentation
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  OCR
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+            <StyledSmAppDiv>
+              <StyledTxt className="txtDiv">
+                <span className="txtSpan">
+                  추론기술
+                </span>
+              </StyledTxt>
+            </StyledSmAppDiv>
+          </StyledAppContent>
+        </StyledAppWrap>
+        <StyledAppWrap>
+          <StyledAppTitle>Machine Learning Framework</StyledAppTitle>
+          <StyledAppContent>
+            <StyledImgWrap className="imgWrap">
+              <StyledAppImgDiv className="imgDiv"><StyledAppImg src={tensorflow} alt="tensorflow" /></StyledAppImgDiv>
+              <StyledAppImgDiv className="imgDiv"><StyledAppImg src={keras} alt="keras" /></StyledAppImgDiv>
+              <StyledAppImgDiv className="imgDiv"><StyledAppImg src={pytorch} alt="pytorch" /></StyledAppImgDiv>
+              <StyledAppImgDiv className="imgDiv"><StyledAppImg src={caffe2} alt="caffe2" /></StyledAppImgDiv>
+              <StyledAppImgDiv className="imgDiv"><StyledAppImg src={theano} alt="theano" /></StyledAppImgDiv>
+            </StyledImgWrap>
+          </StyledAppContent>
+        </StyledAppWrap>
+      </StyledArticleContent>
+    </article>
+  )
 }

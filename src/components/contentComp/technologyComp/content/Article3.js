@@ -24,7 +24,7 @@ const StyledContentImg = styled.img`
 
 export default function Article3() {
     return (
-        <article className="articleGray">
+        <article className="articleGray articleClass">
             <StyledTitle>제조공정의 예측, 예지, 품질검사솔루션 “Doctor Factory”</StyledTitle>
             <StyledArticleContent className="techContent3">
                 <StyledContentDiv><StyledContentImg src={factory} alt="doctor_factory" /></StyledContentDiv>

@@ -3,7 +3,7 @@ import articleImg from '../../../image/article/article1.png';
 
 function ArticleImg() {
     return (
-        <article className="articleGray">
+        <article className="articleDarkBlueGray articleClass mainFirstArticle">
             <img src={articleImg} width="100%" alt="article" />
         </article>
     )

@@ -24,7 +24,7 @@ function SlideImg() {
     focusOnSelect: true
   };
   return (
-    <article className="articleGray">
+    <article className="articleBrown articleClass">
       <Slider {...settings}>
         <div>
           <img style={slideImgStyle} className="slImg" src={slide1} alt="article" />

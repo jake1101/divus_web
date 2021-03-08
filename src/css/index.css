@@ -34,9 +34,18 @@ ul {
   text-align: center;
 }
 
-.contSection {
+.mainSection {
+  padding: 100px 0 30px 0;
   width: 100%;
   color: white;
+  transition: 1s;
+}
+
+.contSection {
+  padding: 30px 0 30px 0;
+  width: 100%;
+  color: white;
+  transition: 1s;
 }
 
 /* bgc */
@@ -119,7 +128,7 @@ ul {
 
 /* footer */
 .footer {
-  margin: 30px 0 0 0;
+  margin: 0;
   color: #fff;
 }
   
@@ -133,4 +142,236 @@ ul {
   cursor: pointer !important;
   color: rgba(107, 144, 179,1) !important;
   border: 2px solid !important;
+}
+
+/* show hidden */
+.showHidden {
+  background: #000;
+  transition: 1s;
+}
+
+@media(max-width: 1900px) {
+
+  /* technology */
+  .techContent1{
+    display: inline-block !important;
+    width: 100%;
+  }
+
+  .techContent1 > div {
+    margin: 30px 30px !important;
+    display: inline-block;
+  }
+
+  .txtDiv {
+    display: table !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  .txtSpan {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .techContent2{
+    display: inline-block !important;
+  }
+
+  .techContent2 > div{
+    margin: 30px 10px;
+    display: inline-block;
+  }
+
+  .imgWrap {
+    margin: 30px auto !important;
+    display: inline-block !important;
+  }
+
+  .imgDiv {
+    display: inline-block !important;
+  }
+
+  /* footer */
+  .footer {
+    font-size: smaller;
+  }
+
+  .footerT .imgLink {
+    width: 150px !important;
+  }
+
+  .footerT p {
+    width: 75px;
+    left: 80px;
+  }
+
+  .footerTm {
+    padding: 12px 0 0 0;
+  }
+
+  .footerTm p {
+    width: 100%;
+  }
+
+  .footerTxt {
+    padding: 10px 0 0 0;
+    line-height: 33px !important;
+  }
+
+  .footerB {
+    padding: 20px 0 0 0;
+  }
+
+  .introClass {
+    width: 220px;
+  }
+
+  .loWAhZ {
+    padding: 0 !important;
+  }
+
+  .ienbCT {
+    display: inline-block !important;
+    text-align: left;
+  }
+
+  .dKCIlw {
+    text-align: left !important;
+  }
+
+  .eBANTT {
+    border-collapse: collapse;
+  }
+
+  .hEA-DGG {
+    padding: 5px !important;
+    width: auto !important;
+    text-align: center;
+    border: 1px solid white !important;
+    border: 1px solid white !important;
+  }
+
+  .dTWEuU td {
+    border: 1px solid white !important;
+    text-align: center;
+  }
+  
+  .contactArticle {
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  @media(max-width: 1450px){
+    .headerDiv {
+      padding: 0 !important;
+    }
+    .jXlIOG {
+      box-shadow: 0 0 50px 50px #222 !important;
+    }
+    .mainFirstArticle {
+      margin-top: 75px !important;
+    }
+    .footerT {
+      display: inline-block !important;
+    }
+
+    .footerLink {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footerLink h2 {
+      margin: 20px 0 0 0;
+    }
+
+    .footerTxt div {
+      display: flex;
+      justify-content: center;
+    }
+    .mainMenu {
+      display: none !important;
+    }
+
+    .hiddenMenu {
+      display: flex !important;
+      justify-content: space-between;
+      margin: 2px 80px 0 80px !important;
+    }
+
+    .hiddenBtn {
+      display: inline-block !important;
+      height: 48px;
+      margin: 8px 0 0 0 !important;
+    }
+
+    .introClass {
+      display: none;
+    }
+  }
+
+  @media(max-width: 1350px){
+    .mainSection {
+      padding: 0;
+    }
+
+    .contSection {
+      padding: 0;
+    }
+    
+    .articleClass {
+      margin: 0;
+    }
+    .resetMenuH{
+      height: 270px !important;
+      transition: 0.2s;
+    }
+  }
+
+  @media(max-width: 800px) {
+    .headerDiv {
+      height: 300px !important;
+      padding: 0 !important;
+      
+    }
+
+    .jXlIOG {
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      height: 300px !important;
+    }
+    #menu {
+      font-size: smaller;
+    }
+
+    .hiddenMenu {
+      display: flex !important;
+      justify-content: space-between;
+      margin: 2px 20px 0 20px !important;
+    }
+
+    .hiddenLinks {
+      right: 170px !important;
+    }
+
+    #sclTopBtn {
+      left: 80% !important;
+    }
+
+    .loginDiv {
+      width: 100% !important;
+    }
+  }
+
+  @media(max-width: 500px) {
+    .footerLink {
+      display: inline-block !important;
+    }
+
+    .fTxtDiv , .fH3 , .fSpan  {
+      display: inline-block !important;
+      width: 100% !important;
+      text-align: center;
+    }
+  }
 }

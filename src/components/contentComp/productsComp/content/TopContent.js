@@ -24,14 +24,14 @@ const StyledImgDiv = styled.div`
 
 export default function TopContent() {
     return (
-        <article className="articleDarkBlueGray">
+        <article className="articleDarkBlueGray articleClass">
             <StyledTxtDiv>
                 <StyledTitleH1>자동차 자동 검사 시스템</StyledTitleH1>
                 <StyleText>인공지능 기반의 컴퓨터 비전 기술을 이용한 자동차 자동 검사 시스템</StyleText>
             </StyledTxtDiv>
 
             <StyledImgDiv>
-                <img src={imgSrc} alt="img" width="893px" />
+                <img src={imgSrc} alt="img" width="100%" />
             </StyledImgDiv>
         </article>
     )

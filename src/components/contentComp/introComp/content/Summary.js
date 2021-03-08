@@ -29,7 +29,7 @@ const StyledSummaryTh = styled.th`
 
 export default function Summary() {
   return (
-    <article className="articleGray">
+    <article className="articleBrown articleClass">
       <StyledSummaryTitle>개요</StyledSummaryTitle>
       <StyledSummarySub>컴퓨터 비전, OCR, 예측기술 분야의 AI 전문 기업으로 DoctorCar, Doctor Factory 솔루션 개발</StyledSummarySub>
       <StyledSummaryTable>

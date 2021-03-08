@@ -17,7 +17,7 @@ const Orgni = () => {
     width: 100%;
   `;
   return (
-    <article className="articleGray">
+    <article className="articleGray articleClass">
       <StyledOrgWrap>
         <StyledOrgTitle>조직도</StyledOrgTitle>
         <StyledOrgImg src={organizationImg} />

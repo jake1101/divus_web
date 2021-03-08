@@ -24,7 +24,7 @@ const Section = () => {
   }
   return (
     <section className="contSection">
-      <article className="articleLightBlueGray">
+      <article className="articleLightBlueGray articleClass contactArticle">
         <StyledArticle>
           <DemoLogin />
           <Link to={"/contact"} style={linkBox}>

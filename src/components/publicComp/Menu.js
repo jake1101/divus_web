@@ -37,9 +37,6 @@ const StyledLinks = styled.div`
 
 const StyledHiddenMenu = styled.div`
   display: none;
-  color: white;
-  margin: 45px 80px 0 0;
-  text-align: right;
 `;
 
 const StyledHiddenMenuBtn = styled.h2`
@@ -51,7 +48,7 @@ const StyledHiddenMenuBtn = styled.h2`
 
 const StyledHiddenMenuLinks = styled.div`
     position: absolute;
-    top: 100px;
+    top: 80px;
     right: 230px;
     text-align: left;
     width: 0;
@@ -81,6 +78,23 @@ const Menu = ({ topPos, showLogo, p, m, b }) => {
 
   const showHiddenBtn = () => {
     setVsb(vsbState => vsbState === "hidden" ? vsbState = "visible" : vsbState = "hidden");
+
+    const m = document.getElementById("menu");
+    const ms = document.querySelector(".mainSection");
+    const cs = document.querySelector(".contSection");
+
+    if (ms) {
+      console.log(ms);
+      ms.classList.toggle("showHidden");
+      m.classList.toggle("resetMenuH");
+    }
+
+    if (cs) {
+      console.log(cs);
+      cs.classList.toggle("showHidden");
+      m.classList.toggle("resetMenuH");
+    }
+
   }
 
   const scrollToTop = () => {
@@ -89,7 +103,13 @@ const Menu = ({ topPos, showLogo, p, m, b }) => {
 
   useEffect(() => {
     var menu = document.querySelector("#menu");
-    var headerH = topPos + (p * 2);
+    if (topPos === 0) {
+      var headerH = topPos + (p * 2);
+    } else {
+      var headerH = document.querySelector(".header").offsetHeight;
+      console.log(headerH);
+    }
+
     var menuH = menu.offsetHeight;
     var fst = 0;
     var ctr = 0;
@@ -125,13 +145,14 @@ const Menu = ({ topPos, showLogo, p, m, b }) => {
 
       fst = st;
     }
+
     return () => {
 
     }
   }, [top])
   return (
     <StyledMenuBar top={top} id="menu">
-      <StyledMenuLinks>
+      <StyledMenuLinks className="mainMenu">
         <StyledLogoDiv showLogo={showLogo}>
           <Link to="/" onClick={scrollToTop}><StyledLogo className="linkClass imgLink" src={logo} alt="logo" /></Link>
         </StyledLogoDiv>
@@ -142,12 +163,12 @@ const Menu = ({ topPos, showLogo, p, m, b }) => {
           <MenuLink src={"/service"} title={"SERVICE"} clickEvent={scrollToTop} />
         </StyledLinks>
       </StyledMenuLinks>
-      <StyledHiddenMenu id="hiddenMenu">
+      <StyledHiddenMenu className="hiddenMenu">
         <StyledLogoDiv showLogo={"block"}>
           <Link to="/" onClick={scrollToTop} ><StyledLogo className="linkClass imgLink" src={logo} alt="logo" /></Link>
         </StyledLogoDiv>
-        <StyledHiddenMenuBtn className="linkClass" onClick={showHiddenBtn}>MENU</StyledHiddenMenuBtn>
-        <StyledHiddenMenuLinks vsb={vsb}>
+        <StyledHiddenMenuBtn className="linkClass hiddenBtn" onClick={showHiddenBtn}>MENU</StyledHiddenMenuBtn>
+        <StyledHiddenMenuLinks className="hiddenLinks" vsb={vsb}>
           <MenuLink src={"/products"} title={"PRODUCTS"} clickEvent={scrollToTop} />
           <MenuLink src={"/technology"} title={"TECHNOLOGY"} clickEvent={scrollToTop} />
           <MenuLink src={"/contact"} title={"CONTACT"} clickEvent={scrollToTop} />

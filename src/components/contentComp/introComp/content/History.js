@@ -35,7 +35,7 @@ const StyledLi = styled.li`
 
 export default function History() {
   return (
-    <article className="articleGray">
+    <article className="articleDarkBlueGray articleClass">
       <StyledHistoryTitle>회사 연혁</StyledHistoryTitle>
       <StyledHistoryDiv>
         <img className="introClass" src={graphImg} width={350} />

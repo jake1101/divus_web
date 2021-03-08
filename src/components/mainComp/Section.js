@@ -6,15 +6,15 @@ import SlideImg from './content/SlideImg';
 import MapContent from './content/kakaoMap';
 
 export default function Section() {
-    return (
-        <section className="contSection" style={{ margin: "105px 0 0 0" }}>
+  return (
+    <section className="mainSection">
 
-            <ArticleImg />
+      <ArticleImg />
 
-            <SlideImg />
+      <SlideImg />
 
-            <MapContent />
+      <MapContent />
 
-        </section>
-    )
+    </section>
+  )
 }

@@ -22,7 +22,7 @@ function MapContent() {
   })
 
   return (
-    <article id="mapArticle" className="articleGray">
+    <article id="mapArticle" className="articleGray articleClass">
       <StyledMapDiv>
         <div id="daumRoughmapContainer1612976515378" className="root_daum_roughmap root_daum_roughmap_landing"></div>
       </StyledMapDiv>

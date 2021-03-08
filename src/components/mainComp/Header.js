@@ -13,6 +13,14 @@ const StyledHeaderContent = styled.div`
     height: ${props => props.height}px;
     padding: ${props => props.padding}px;
     border-bottom: none;
+    display: flex;
+    justify-content: center;
+`;
+
+const StyledImgDiv = styled.div`
+    height: ${props => props.height}px;
+    padding: ${props => props.padding}px;
+    width: 900px;
 `;
 
 const StyledBgImg = styled.img`
@@ -25,7 +33,9 @@ export default function Header() {
     return (
         <StyledHeader className="header">
             <StyledHeaderContent className="headerDiv" height={400} padding={100}>
-                <StyledBgImg src={bg} alt="backgroundgjf" />
+                <StyledImgDiv>
+                    <StyledBgImg src={bg} alt="backgroundgjf" width="100%" />
+                </StyledImgDiv>
             </StyledHeaderContent>
             <Menu topPos={400} p={100} m={0} b={0} />
         </StyledHeader>

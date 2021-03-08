@@ -40,6 +40,7 @@ const SetScrollTop = function () {
     left: "90%",
     color: "rgba(107, 144, 179, 0.7)",
     outline: 0,
+    zIndex: 400
   }
 
   return (

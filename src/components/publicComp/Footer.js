@@ -59,7 +59,7 @@ export default function Footer() {
             <Link to="/"><img className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
             <StyledLogoP>(주)디우스</StyledLogoP>
           </StyledLogoDiv>
-          <div>
+          <div className="footerTm">
             <StyledLinkDiv className="footerLink">
               <Link to="/intro" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">회사 소개</StyledH2></Link>
               <Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}><StyledH2 className="linkClass">위치</StyledH2></Link>
@@ -70,13 +70,13 @@ export default function Footer() {
             </StyledAddressDiv>
           </div>
           <StyledTxtDiv className="footerTxt">
-            <div>
-              <StyledH3>Phone: </StyledH3>
-              <span>070-8259-3470</span>
+            <div className="fTxtDiv">
+              <StyledH3 className="fH3">Phone: </StyledH3>
+              <span className="fSpan">070-8259-3470</span>
             </div>
-            <div>
-              <StyledH3>E-mail: </StyledH3>
-              <span>soju68@gmail.com</span>
+            <div className="fTxtDiv">
+              <StyledH3 className="fH3">E-mail: </StyledH3>
+              <span className="fSpan">soju68@gmail.com</span>
             </div>
           </StyledTxtDiv>
         </StyledTopDiv>
