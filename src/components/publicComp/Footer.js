@@ -5,7 +5,9 @@ import styled from 'styled-components';
 import logo from '../../image/logo/logo_w_colored.png';
 
 const StyledTopDiv = styled.div`
+  position: relative;
   display: flex;
+  justify-content: space-between;
 `;
 
 const StyledLogoDiv = styled.div`
@@ -19,27 +21,25 @@ const StyledLogoP = styled.p`
 
 const StyledLinkDiv = styled.div`
   display: flex;
-  padding: 35px 0 0 60px;
+  padding: 5px 0 0 0;
 `;
 
 const StyledAddressDiv = styled.div`
-  padding: 4px 0 0 60px;
+  padding: 10px 0 0 0;
 `;
 
 const StyledH2 = styled.h2`
-  padding: 0 30px 0 0;
-`;
-
-const StyledMidDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0 0 0;
+  margin: 0 30px 0 0;
 `;
 
 const StyledTxtDiv = styled.div`
   text-align: left;
+  line-height: 45px;
 `;
 
+const StyledH3 = styled.h3`
+  display: inline;
+`;
 
 const linkStyle = {
   color: "#fff",
@@ -69,18 +69,17 @@ export default function Footer() {
               <p>경기도 하남시 검단산로 239 하남시 벤처센터 405호</p>
             </StyledAddressDiv>
           </div>
+          <StyledTxtDiv className="footerTxt">
+            <div>
+              <StyledH3>Phone: </StyledH3>
+              <span>070-8259-3470</span>
+            </div>
+            <div>
+              <StyledH3>E-mail: </StyledH3>
+              <span>soju68@gmail.com</span>
+            </div>
+          </StyledTxtDiv>
         </StyledTopDiv>
-
-        <StyledMidDiv className="footerM">
-          <StyledTxtDiv>
-            <h3>Phone: </h3>
-            <span>070-8259-3470</span>
-          </StyledTxtDiv>
-          <StyledTxtDiv>
-            <h3>E-mail: </h3>
-            <span>soju68@gmail.com</span>
-          </StyledTxtDiv>
-        </StyledMidDiv>
 
         <div className="footerB">
           <h3>

@@ -19,17 +19,18 @@
   background-color: #46413b;
 }
 
+.footer {
+    margin: 0;
+    color: #fff;
+}
+
 .articleFooter {
-    padding: 50px 25%;
+    padding: 15px 25%;
     background-color: #46413b;
 }
 
-.footer {
-    margin: 0;
-}
-
 @media(max-width: 2000px) {
-    
+
 }
 
 /* @media (max-width: 1000px) {
