@@ -4,23 +4,42 @@ import styled from 'styled-components';
 
 import logo from '../../image/logo/logo_w_colored.png';
 
-const StyledFlexDiv = styled.div`
+const StyledTopDiv = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
-const StyledLeftLinkDiv = styled.div`
-  padding: 40px 0 0 50px;
+const StyledLogoDiv = styled.div`
+  position: relative;
+`;
+
+const StyledLogoP = styled.p`
+  position: absolute;
+  left: 125px;
+`;
+
+const StyledLinkDiv = styled.div`
+  display: flex;
+  padding: 35px 0 0 60px;
+`;
+
+const StyledAddressDiv = styled.div`
+  padding: 4px 0 0 60px;
 `;
 
 const StyledH2 = styled.h2`
-  display: inline-block;
-  margin: 0 0 0 40px;
+  padding: 0 30px 0 0;
 `;
 
-const StyledBottomDiv = styled.div`
-  width: 100%;
+const StyledMidDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
 `;
+
+const StyledTxtDiv = styled.div`
+  text-align: left;
+`;
+
 
 const linkStyle = {
   color: "#fff",
@@ -34,37 +53,41 @@ export default function Footer() {
   return (
     <div className="footer">
       <article className="articleFooter">
-        <StyledFlexDiv>
-          <StyledFlexDiv className="footerL">
-            <div>
-              <Link to="/"><img className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
-            </div>
-            <StyledLeftLinkDiv className="footerLink">
-              <Link to="/intro" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">회사 소개</StyledH2></Link>
-              <Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}><StyledH2 className="linkClass">위치</StyledH2></Link>
-              <Link to="/contact" style={linkStyle} onClick={scrollToTop}><StyledH2 className="linkClass">문의</StyledH2></Link>
-            </StyledLeftLinkDiv>
-          </StyledFlexDiv>
-          <div className="footerR">
-            <div>
-              <h2>Address</h2>
+
+        <StyledTopDiv className="footerT">
+          <StyledLogoDiv>
+            <Link to="/"><img className="linkClass imgLink" src={logo} alt="logo" width="200" /></Link>
+            <StyledLogoP>(주)디우스</StyledLogoP>
+          </StyledLogoDiv>
+          <div>
+            <StyledLinkDiv className="footerLink">
+              <StyledH2 className="linkClass"><Link to="/intro" style={linkStyle} onClick={scrollToTop}>회사 소개</Link></StyledH2>
+              <StyledH2 className="linkClass"><Link to="/" style={linkStyle} className="mapLink" onClick={onClickMapLink}>위치</Link></StyledH2>
+              <StyledH2 className="linkClass"><Link to="/contact" style={linkStyle} onClick={scrollToTop}>문의</Link></StyledH2>
+            </StyledLinkDiv>
+            <StyledAddressDiv>
               <p>경기도 하남시 검단산로 239 하남시 벤처센터 405호</p>
-            </div>
-            <div>
-              <h2>Phone</h2>
-              <p>070-8259-3470</p>
-            </div>
-            <div>
-              <h2>E-mail</h2>
-              <p>soju68@gmail.com</p>
-            </div>
+            </StyledAddressDiv>
           </div>
-        </StyledFlexDiv>
-        <StyledBottomDiv className="footerB">
+        </StyledTopDiv>
+
+        <StyledMidDiv className="footerM">
+          <StyledTxtDiv>
+            <h3>Phone: </h3>
+            <span>070-8259-3470</span>
+          </StyledTxtDiv>
+          <StyledTxtDiv>
+            <h3>E-mail: </h3>
+            <span>soju68@gmail.com</span>
+          </StyledTxtDiv>
+        </StyledMidDiv>
+
+        <div className="footerB">
           <h3>
             © Copyright Divus Corp. All rights reserved.
           </h3>
-        </StyledBottomDiv>
+        </div>
+
       </article>
     </div>
   )

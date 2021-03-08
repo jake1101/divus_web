@@ -29,34 +29,7 @@
 }
 
 @media(max-width: 2000px) {
-    .footerL {
-        display: block !important;
-    }
-
-    .footerLink {
-        padding: 10px 0 0 20px !important;
-    }
-
-    .footerLink h2 {
-        margin: 0 40% 0 0;
-        padding: 10px 0 0 0;
-    }
-
-    .footerR {
-        padding: 45px 0 0 0;
-    }
-
-    .footerR h2, .footerR p {
-        width: 100%;
-        text-align: right;
-    }
-
-    .footerB {
-        padding: 50px 0 0 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+    
 }
 
 /* @media (max-width: 1000px) {
