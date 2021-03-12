@@ -150,9 +150,8 @@ ul {
   transition: 1s;
 }
 
-@media(max-width: 1900px) {
+ @media(max-width: 1900px) {
 
-  /* technology */
   .techContent1{
     display: inline-block !important;
     width: 100%;
@@ -192,7 +191,6 @@ ul {
     display: inline-block !important;
   }
 
-  /* footer */
   .footer {
     font-size: smaller;
   }
@@ -374,4 +372,4 @@ ul {
       text-align: center;
     }
   }
-}
+} 

@@ -72,7 +72,7 @@ export default function Footer() {
           <StyledTxtDiv className="footerTxt">
             <div className="fTxtDiv">
               <StyledH3 className="fH3">Phone: </StyledH3>
-              <span className="fSpan">070-8259-3470</span>
+              <span className="fSpan">010-3523-5140</span>
             </div>
             <div className="fTxtDiv">
               <StyledH3 className="fH3">E-mail: </StyledH3>

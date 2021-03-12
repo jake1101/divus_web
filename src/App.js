@@ -9,8 +9,6 @@ import Contact from './components/contentComp/contactComp/Contact';
 import Service from './components/contentComp/serviceComp/Service';
 import Intro from './components/contentComp/introComp/Intro';
 
-import './css/app.css';
-
 const SetScrollTop = function () {
   const [show, setShow] = useState("none");
   const [pos] = useState({ top: 0, left: 0, behavior: 'smooth' });
